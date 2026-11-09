@@ -393,7 +393,7 @@ eqn{display:block;margin:1.05em 0}
 <button class="mini-btn" id="expandAll" type="button">展开</button>
 <button class="mini-btn" id="collapseAll" type="button">折叠</button>
 </div>
-<nav class="nav"><a class="nav-link lv1" href="#top">研究方向与代表方法</a><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#overview">第一章 研究范围与总体地图</a></div><div class="nav-children"><a class="nav-link lv3" href="#layers">1.1 形式化工具的四层理解</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#modeling">第二章 方向一：LLM 辅助建模与抽象简化</a></div><div class="nav-children"><a class="nav-link lv3" href="#neuroabs">2.3 NeuroAbs：基于语义理解的 RTL 抽象</a><a class="nav-link lv3" href="#na-problem">2.3.1 一句话理解与问题定义</a><a class="nav-link lv3" href="#na-flow">2.3.2 方法总览</a><a class="nav-link lv3" href="#na-localize">2.3.3 第一步：理解场景，定位候选代码</a><a class="nav-link lv3" href="#na-rewrite">2.3.4 第二步：圈定修改范围，LLM 提出简化方案</a><a class="nav-link lv3" href="#na-soundness">2.3.5 第三步：检查简化有没有漏掉真实行为</a><a class="nav-link lv3" href="#na-refine">2.3.6 第四步：根据假警报，补回必要细节</a><a class="nav-link lv3" href="#na-experiment">2.3.7 实验结果：简化后，验证能快多少？</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#orchestration">第三章 方向二：验证流程调度与编排</a></div><div class="nav-children"><a class="nav-link lv3" href="#saarthi">3.1 Saarthi：多智能体验证工作流</a><a class="nav-link lv3" href="#saarthi-problem">3.1.1 问题：能生成断言，还不等于完成验证</a><a class="nav-link lv3" href="#saarthi-roles">3.1.2 架构：专业分工和协调者</a><a class="nav-link lv3" href="#saarthi-loop">3.1.3 工作循环：按错误类型安排下一步</a><a class="nav-link lv3" href="#saarthi-grounding">3.1.4 规则手册和 GraphRAG：减少反复犯错</a><a class="nav-link lv3" href="#saarthi-trust">3.1.5 可靠性：不同检查负责不同承诺</a><a class="nav-link lv3" href="#saarthi-results">3.1.6 实验：覆盖反馈和人工参与是否有效</a><a class="nav-link lv3" href="#saarthi-limits">3.1.7 局限与在四层地图中的位置</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#engines">第四章 方向三：验证引擎内部证明搜索</a></div><div class="nav-children"><a class="nav-link lv3" href="#engine-overview">4.1 方向概述：从固定启发式到语义指导</a><a class="nav-link lv3" href="#agentic-ic3">4.2 Agentic-IC3：语义驱动的 IC3 证明搜索</a><a class="nav-link lv3" href="#aic3-problem">4.2.1 一句话理解：目标已知，但证明路线难找</a><a class="nav-link lv3" href="#aic3-basics">4.2.2 IC3 基础：从坏状态往回追，逐步建立屏障</a><a class="nav-link lv3" href="#aic3-example">4.2.3 原论文例子：看出两个控制器之间的整体关系</a><a class="nav-link lv3" href="#aic3-architecture">4.2.4 架构：Agent 在内环提出建议，内核维护证明</a><a class="nav-link lv3" href="#aic3-propose">4.2.5 Propose：分别处理 SAT 与 UNSAT 两种反馈</a><a class="nav-link lv3" href="#aic3-observe">4.2.6 Observe：给证明过程增加一个有意义的观察量</a><a class="nav-link lv3" href="#aic3-backtrack">4.2.7 Backtrack：这条路太难，回到上一级重新选择</a><a class="nav-link lv3" href="#aic3-correctness">4.2.8 为什么 LLM 猜错，不应直接导致假安全？</a><a class="nav-link lv3" href="#aic3-results">4.2.9 实验：难例解决能力与调用成本</a><a class="nav-link lv3" href="#aic3-ablation">4.2.10 消融：批处理减少模型交互</a><a class="nav-link lv3" href="#aic3-limits">4.2.11 局限、复现与研究启发</a><a class="nav-link lv3" href="#aic3-comparison">4.2.12 与 NeuroAbs 对照：改变题目还是改变思路？</a><a class="nav-link lv3" href="#engine-code-plan">4.3 另一种接入方式：离线优化引擎代码</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#solvers">第五章 方向四：底层求解器优化</a></div><div class="nav-children"><a class="nav-link lv3" href="#satlution">5.1 SATLUTION：仓库级 SAT 求解器代码进化</a><a class="nav-link lv3" href="#sat-problem">5.1.1 问题：求解器内部策略很难人工调好</a><a class="nav-link lv3" href="#sat-flow">5.1.2 接入方式：离线研发，在线运行普通求解器</a><a class="nav-link lv3" href="#sat-edits">5.1.3 修改什么：策略代码、集成与规则</a><a class="nav-link lv3" href="#sat-correctness">5.1.4 为什么“更快”不能靠猜答案</a><a class="nav-link lv3" href="#sat-performance">5.1.5 评价：PAR-2、独立年份测试与硬件条件</a><a class="nav-link lv3" href="#sat-cost">5.1.6 成本、失败与适用范围</a><a class="nav-link lv3" href="#sat-takeaway">5.1.7 接入范式与研究空间</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#comparison">第六章 跨方向比较与研究机会</a></div><div class="nav-children"></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#references">附录 术语与参考资料</a></div><div class="nav-children"></div></div></nav>
+<nav class="nav"><a class="nav-link lv1" href="#top">研究方向与代表方法</a><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#overview">第一章 研究范围与总体地图</a></div><div class="nav-children"><a class="nav-link lv3" href="#layers">1.1 形式化工具的四层理解</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#modeling">第二章 方向一：LLM 辅助建模与抽象简化</a></div><div class="nav-children"><a class="nav-link lv3" href="#neuroabs">2.3 NeuroAbs：基于语义理解的 RTL 抽象</a><a class="nav-link lv3" href="#na-problem">2.3.1 一句话理解与问题定义</a><a class="nav-link lv3" href="#na-flow">2.3.2 方法总览</a><a class="nav-link lv3" href="#na-localize">2.3.3 第一步：理解场景，定位候选代码</a><a class="nav-link lv3" href="#na-rewrite">2.3.4 第二步：圈定修改范围，LLM 提出简化方案</a><a class="nav-link lv3" href="#na-soundness">2.3.5 第三步：检查简化有没有漏掉真实行为</a><a class="nav-link lv3" href="#na-refine">2.3.6 第四步：根据假警报，补回必要细节</a><a class="nav-link lv3" href="#na-experiment">2.3.7 实验结果：简化后，验证能快多少？</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#orchestration">第三章 方向二：验证流程调度与编排</a></div><div class="nav-children"><a class="nav-link lv3" href="#saarthi">3.1 Saarthi：多智能体验证工作流</a><a class="nav-link lv3" href="#saarthi-problem">3.1.1 问题：能生成断言，还不等于完成验证</a><a class="nav-link lv3" href="#saarthi-roles">3.1.2 架构：专业分工和协调者</a><a class="nav-link lv3" href="#saarthi-loop">3.1.3 工作循环：按错误类型安排下一步</a><a class="nav-link lv3" href="#saarthi-grounding">3.1.4 规则手册和 GraphRAG：减少反复犯错</a><a class="nav-link lv3" href="#saarthi-trust">3.1.5 可靠性：不同检查负责不同承诺</a><a class="nav-link lv3" href="#saarthi-results">3.1.6 实验：覆盖反馈和人工参与是否有效</a><a class="nav-link lv3" href="#saarthi-limits">3.1.7 局限与在四层地图中的位置</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#engines">第四章 方向三：验证引擎内部证明搜索</a></div><div class="nav-children"><a class="nav-link lv3" href="#agentic-ic3">4.1 Agentic-IC3：语义驱动的 IC3 证明搜索</a><a class="nav-link lv3" href="#aic3-problem">4.1.1 一句话理解与问题定义</a><a class="nav-link lv3" href="#aic3-basics">4.1.2 先理解 IC3：从可能出错的情况往回查</a><a class="nav-link lv3" href="#aic3-example">4.1.3 一个贯穿例子：两个控制器能否同时完成？</a><a class="nav-link lv3" href="#aic3-architecture">4.1.4 方法总览：智能体和证明程序怎样配合？</a><a class="nav-link lv3" href="#aic3-propose">4.1.5 第一步：提出有帮助的中间规律</a><a class="nav-link lv3" href="#aic3-observe">4.1.6 第二步：换一个观察角度，寻找隐藏关系</a><a class="nav-link lv3" href="#aic3-backtrack">4.1.7 第三步：当前路线太难，就回退换一种思路</a><a class="nav-link lv3" href="#aic3-correctness">4.1.8 谁保证正确：LLM 可以猜，工具必须检查</a><a class="nav-link lv3" href="#aic3-results">4.1.9 实验结果：更多难题得到了解答</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#solvers">第五章 方向四：底层求解器优化</a></div><div class="nav-children"><a class="nav-link lv3" href="#satlution">5.1 SATLUTION：仓库级 SAT 求解器代码进化</a><a class="nav-link lv3" href="#sat-problem">5.1.1 问题：求解器内部策略很难人工调好</a><a class="nav-link lv3" href="#sat-flow">5.1.2 接入方式：离线研发，在线运行普通求解器</a><a class="nav-link lv3" href="#sat-edits">5.1.3 修改什么：策略代码、集成与规则</a><a class="nav-link lv3" href="#sat-correctness">5.1.4 为什么“更快”不能靠猜答案</a><a class="nav-link lv3" href="#sat-performance">5.1.5 评价：PAR-2、独立年份测试与硬件条件</a><a class="nav-link lv3" href="#sat-cost">5.1.6 成本、失败与适用范围</a><a class="nav-link lv3" href="#sat-takeaway">5.1.7 接入范式与研究空间</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#comparison">第六章 跨方向比较与研究机会</a></div><div class="nav-children"></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#references">附录 术语与参考资料</a></div><div class="nav-children"></div></div></nav>
 </aside>
 <div class="mask" id="mask"></div>
 <main class="doc" id="doc"><header class="doc-hero"><h1 id="top">大模型与智能体赋能硬件形式化验证：方向总览与论文解读</h1><blockquote><p>大模型如何帮助形式化验证：从 RTL 抽象、验证流程编排，到证明搜索与求解器优化。</p></blockquote></header><section><h2 id="overview">第一章 研究范围与总体地图</h2>
@@ -508,7 +508,7 @@ end</code></pre>
 <p>不过，<strong>抽象模型报错，也可能暴露原电路的真实错误，不能一律当作假警报。</strong>需要检查反例能否在原电路中发生，或恢复相关逻辑后继续验证。最终可能证明要求成立、确认真实错误，也可能因资源不足而无法确定。</p>
 <p>这一阶段主要由程序和形式化工具完成。它的目标是<strong>保留有用的简化，只补回证明所必需的细节</strong>，在计算难度与模型精度之间取得平衡。</p>
 <h4 id="na-experiment">2.3.7 实验结果：简化后，验证能快多少？</h4>
-<p><strong>在论文的测试中，NeuroAbs 让 AVR 后端的平均证明时间从约 607 秒降至 335 秒，减少约 45%；这是证明阶段的收益，尚未计入 LLM 生成抽象等额外成本。</strong></p>
+<p><strong>论文测试发现，简化后的电路更容易验证：AVR 工具的平均证明时间从约 10 分钟缩短到约 5 分半。</strong></p>
 <p>实验覆盖四个电路设计、55 个验证场景。换用 rIC3 后端时，平均证明时间从约 18.71 秒降至 16.94 秒，收益较小；部分暂时无法完成完整证明的任务，则能在相同时间内检查更多周期。也就是说，<strong>简化确实可能帮助验证，但效果取决于电路、验证目标和后端工具。</strong></p>
 <p>实验还发现，LLM 直接复制原代码也能通过可靠性检查，却几乎没有简化价值。因此，这套方法既要保证<strong>“改得可靠”</strong>，也要做到<strong>“确实减少计算负担”</strong>。实际使用时，还需把生成、检查和恢复细节的时间一起计算，判断整体是否划算。</p>
 </section><section><h2 id="orchestration">第三章 方向二：验证流程调度与编排</h2>
@@ -546,74 +546,61 @@ end</code></pre>
 <p>这是一篇工作流编排代表论文，不是多引擎资源调度的 SOTA 证据。样本六个，规格质量和 HIL 影响较大；规则、RAG、角色分工各自收益还需更严格消融；完整实现与实验配置的公开程度也影响可复现性。摘要中的“准确率提高70%、迭代减少50%”缺乏本节可直接对应的统一比较口径，因此不作为主结论。</p>
 <p>值得研究：怎样根据错误类型选择下一个动作？何时停止低收益循环？如何追踪“原始需求→属性→证据”的一致性？以后可继续寻找真正根据引擎进展分配资源的 LLM 研究，补足本层另一部分。</p>
 </section><section><h2 id="engines">第四章 方向三：验证引擎内部证明搜索</h2>
-<p>这一方向保持 RTL、目标性质和环境条件不变，研究 LLM 如何进入证明算法的决策过程。关注的问题是：什么中间关系值得证明、怎样概括当前失败状态、何时换一条路线。它区别于在工具外生成目标断言，也区别于修改底层 SMT 的分支搜索。</p>
-<h3 id="engine-overview">4.1 方向概述：从固定启发式到语义指导</h3>
-<p>传统引擎主要依靠逻辑结构与人工设计的启发式推进搜索。LLM 的机会在于同时阅读 RTL 含义和证明反馈，提出有设计意义的中间关系；风险是错误建议、调用延迟和无效搜索。评价需要同时记录解决数、端到端耗时、模型成本与严格检查机制。</p>
-<h3 id="agentic-ic3">4.2 Agentic-IC3：语义驱动的 IC3 证明搜索</h3>
-<p><strong>原文：</strong>Agentic-IC3: Enabling Semantic Proof Search in IC3 Model Checking。作者 Yu-Wei Fan、SooHyuk Cho、Aarti Gupta、Sharad Malik，Princeton University。论文版本：arXiv:2609.27162v1，20 页，2026 年 9 月预印本。<a href="https://arxiv.org/abs/2609.27162">原文与版本入口</a>。</p>
-<h4 id="aic3-problem">4.2.1 一句话理解：目标已知，但证明路线难找</h4>
-<p>输入是 RTL、目标安全性质与环境设置；输出仍是证明安全、反例或未确定。Agent 不随意修改最终目标，而是参与 IC3 内部寻找引理、组织证明义务与修订搜索路线。最困难的部分往往不是检查一个候选公式，而是找到值得检查的中间关系。</p>
-<p>可以类比为：做数学题时，知道题目和最终结论，也不等于知道应该先证哪个辅助结论。LLM 在这里帮助找思路，形式化后端负责检查思路中的具体承诺。</p>
-<h4 id="aic3-basics">4.2.2 IC3 基础：从坏状态往回追，逐步建立屏障</h4>
-<p>形式化模型用 Init 表示初始状态，T 表示一步状态变化，P 表示目标性质。IC3 维护一组 frame，即 F₀、F₁、F₂……，对不同深度可达状态进行过近似。这些集合是嵌套关系，不是互不相交的分区，也不是逐周期仿真波形。</p>
-<p>它考察可能违反 P 的状态，追问哪些前驱能够一步进入它。如果前驱确实从初始状态可达，就可能组成真实反例；如果可以证明相关区域不可达，就加入经过检查的引理排除它们。引理描述的是可以保留的关系，反过来排除不满足关系的状态。</p>
-<pre><code>发现危险状态 → 查询前驱 → 追查更早的证明义务
-                        ↓
-           检查并加入引理，排除不可达区域
-                        ↓
-       找到真实反例 / 得到归纳不变式 / 未确定</code></pre>
-<p>局部 frame 引理不自动是永远成立的全局不变式。最终安全证明需要一组关系在初始状态成立、经过任何合法一步转移后仍保持，并足以蕴含 P。</p>
-<figure class="paper-figure" id="aic3-figure-1"><a href="assets/agentic-ic3/figure-1.png" target="_blank" rel="noopener"><img src="assets/agentic-ic3/figure-1.png" alt="IC3 的前驱追查与泛化：左侧追踪待证明义务，右侧用引理排除更大区域。" loading="lazy" decoding="async"></a><figcaption>原文图 1：IC3 的前驱追查与泛化：左侧追踪待证明义务，右侧用引理排除更大区域。 点击打开大图。</figcaption><p class="source">来源：<a href="https://arxiv.org/pdf/2609.27162v1#page=4">Agentic-IC3 v1，第 4 页</a>。原图裁剪，附中文说明。</p></figure><h4 id="aic3-example">4.2.3 原论文例子：看出两个控制器之间的整体关系</h4>
-<p>论文图 2 使用两个控制器副本做信息流验证。两边共享 a 和 reset；a 为零时都装入零，否则环境假设要求 b1=b2，两边因此装入相同数值，并按相同规则更新。目标是 finish1=finish2，即两边完成信号一致。</p>
-<p>传统位级推理可能先积累某个寄存器位为零等零散事实。阅读 RTL 的 Agent 可以提出 state1=state2 这样的整体关系，再结合计数器关系帮助推进证明。这里 b1=b2 是原例中带条件的环境要求，不是模型为了通过证明临时编造的假设；也不能认为只证明状态相等这一条就一定足够。</p>
-<figure class="paper-figure" id="aic3-figure-2"><a href="assets/agentic-ic3/figure-2.png" target="_blank" rel="noopener"><img src="assets/agentic-ic3/figure-2.png" alt="双副本控制器与安全性质：输入条件决定两份执行何时必须保持一致。" loading="lazy" decoding="async"></a><figcaption>原文图 2：双副本控制器与安全性质：输入条件决定两份执行何时必须保持一致。 点击打开大图。</figcaption><p class="source">来源：<a href="https://arxiv.org/pdf/2609.27162v1#page=5">Agentic-IC3 v1，第 5 页</a>。原图裁剪，附中文说明。</p></figure><h4 id="aic3-architecture">4.2.4 架构：Agent 在内环提出建议，内核维护证明</h4>
-<p>RTL 经 Yosys 转成字级 BTOR2 模型；Python 实现基于 Pono，底层使用 Bitwuzla。Agent 还能读原始 RTL，以设计信号名和受支持的 Verilog 表达式子集沟通。表达式先经过解析与类型检查，再转入后端。</p>
-<p>证明内核保存 frame、已接纳引理、待处理义务和观察表达式。长生命周期会话通过 JSON Lines 接口交互，Agent 的每次调用不会让证明从零开始。这是接入持续演化的证明状态，不是简单重复调用一个完整工具命令。</p>
-<pre><code>IC3 内核：当前目标、frame 引理、前驱/阻断事实
-                         ↓
-LLM Agent 读取 RTL 与累计反馈
-                         ↓
-Propose 提引理 / Observe 增加观察 / Backtrack 回退
-                         ↓
-内核解析、检查、递归证明并更新合法状态
-                         ↓
-新的证明反馈返回 Agent</code></pre>
-<figure class="paper-figure" id="aic3-figure-3"><a href="assets/agentic-ic3/figure-3.png" target="_blank" rel="noopener"><img src="assets/agentic-ic3/figure-3.png" alt="Agentic-IC3 架构：内核持有证明状态，Agent 通过 Propose、Observe、Backtrack 参与搜索。" loading="lazy" decoding="async"></a><figcaption>原文图 3：Agentic-IC3 架构：内核持有证明状态，Agent 通过 Propose、Observe、Backtrack 参与搜索。 点击打开大图。</figcaption><p class="source">来源：<a href="https://arxiv.org/pdf/2609.27162v1#page=7">Agentic-IC3 v1，第 7 页</a>。原图裁剪，附中文说明。</p></figure><h4 id="aic3-propose">4.2.5 Propose：分别处理 SAT 与 UNSAT 两种反馈</h4>
-<p>这里 SAT/UNSAT 指内部某个逻辑查询的结果，不是整个设计是否安全。查询可以简写为“在前一层允许的状态中，是否存在一步能进入当前待排除区域的前驱”。</p>
-<table><thead><tr><th>情形</th><th>内核发现什么</th><th>Agent 做什么</th><th>后端如何处理</th></tr></thead><tbody>
-<tr><td>SAT：存在前驱</td><td>找到可能引向危险区域的状态</td><td>根据多组前驱与 RTL，提出能排除部分前驱的关系</td><td>检查是否有排除作用，先用 BMC 找候选的浅层反例，再递归证明对应义务</td></tr>
-<tr><td>UNSAT：不存在相应前驱</td><td>当前区域可以尝试阻断，已经得到一些局部事实</td><td>把多个阻断事实概括为更有意义的关系</td><td>检查初始成立和相对归纳，再把合法引理加入相应 frame</td></tr></tbody></table>
-<p><strong>SAT 分支的关键：</strong>Agent 可以超越对单个前驱的局部概括，提出更宽范围的关系。但更大胆的关系可能误删可达状态，所以必须验证。BMC 在这里用于提前找错；在深度内未发现违反，不等于已经证明引理永远成立，后端还要递归处理。</p>
-<p><strong>UNSAT 分支的关键：</strong>Agent 提议的关系需要能够蕴含准备替换的阻断事实。一个更简洁的公式不一定更强、更正确；逻辑蕴含和归纳检查决定它能否替换。</p>
-<p>论文采用批处理，一次让 Agent 看多组状态或事实，并允许一次提议最多五条引理。这样既方便发现共同关系，也减少频繁模型调用。仍沿用传统局部泛化收集区域，不是把所有现有算法完全换成 LLM。</p>
-<h4 id="aic3-observe">4.2.6 Observe：给证明过程增加一个有意义的观察量</h4>
-<p>两个计数器各自变化，单看数值不容易看出规律。原文表 1 给出以下示例：</p>
-<table><thead><tr><th>active</th><th>cnt1</th><th>cnt2</th><th>派生观察 cnt1+cnt2</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>7</td><td>8</td></tr><tr><td>1</td><td>5</td><td>3</td><td>8</td></tr><tr><td>1</td><td>6</td><td>2</td><td>8</td></tr><tr><td>0</td><td>2</td><td>3</td><td>5</td></tr><tr><td>0</td><td>4</td><td>7</td><td>11</td></tr></tbody></table>
-<p>Agent 注册 obs.total=cnt1+cnt2 后，后端在后续反馈中计算并展示它，帮助提出 active ⇒ obs.total==8 这个候选。这相当于给复杂数据增加一个有用视角，不是修改原电路或假设这个等式已经成立。观察表达式的定义、位宽会被检查；样本中都相等不代表已证明全局相等。</p>
-<h4 id="aic3-backtrack">4.2.7 Backtrack：这条路太难，回到上一级重新选择</h4>
-<p>一个引理即使在当前有界检查中没有反例，也可能引出大量递归义务。Agent 观察后续反馈后，可以放弃这条正在尝试的提议，返回它所服务的上级问题，改提另一组关系。</p>
-<p>例如“两个内部量始终相等”可能太强，后续发现只需要证明“某控制状态下相等”。这是教学示意，具体候选仍须由后端验证。回退不是随意清空证明或撤销目标；已通过独立检查并加入合法 frame 的引理可以保留，因为其有效性不依赖被放弃的猜测。</p>
-<h4 id="aic3-correctness">4.2.8 为什么 LLM 猜错，不应直接导致假安全？</h4>
-<p>论文的信任边界是“提议与接纳分离”。对加入 frame 的引理 ℓ，核心检查包括：</p>
-<pre><code>Init ⇒ ℓ                     初始成立
-Fᵢ₋₁ ∧ ℓ ∧ T ⇒ ℓ′           相对归纳保持</code></pre>
-<p>其中 ℓ′ 表示下一状态的同一关系。检查失败的模型反馈给 Agent；通过的引理按其 frame 范围使用。最终还需要 IC3 的完整收敛与安全条件，不能仅因模型返回一段看似合理的解释就宣布安全。</p>
-<p>错误提议会造成额外检查、修订或超时，但不能直接充当公理。可靠性仍依赖 RTL 编码、接口、内核、SMT 和错误状态处理实现；本文也不应被表述为已建立独立证明证书检查链。工具的 unknown/超时始终应与证明成功区分。</p>
-<h4 id="aic3-results">4.2.9 实验：难例解决能力与调用成本</h4>
-<p>论文表 2 共 14 个信息流安全和功能验证案例，偏向传统 IC3 的难例；每例一小时，后端限制单 CPU 核、16 GiB。模型服务的远程算力不包含在“单核”字面含义内。实验使用 Codex CLI 0.153.0、GPT-5.6-Sol、medium reasoning；新建会话并限制网络，Agent 不能修改后端代码或状态文件。</p>
-<table><thead><tr><th>方法</th><th>一小时内解决</th><th>解释边界</th></tr></thead><tbody><tr><td>Agentic-IC3</td><td>10/14</td><td>其中四例三个对照均未解决</td></tr><tr><td>rIC3</td><td>5/14</td><td>与本方法有共同解决案例</td></tr><tr><td>A-IC3</td><td>5/14</td><td>是其他学习路线的实验对照，不纳入LLM 路线</td></tr><tr><td>Pono-IC3Bits</td><td>0/14</td><td>与本方法共享基础设施但策略不同，不等于所有 Pono 引擎均失败</td></tr></tbody></table>
-<p>fp_divider：本方法 512.71 秒，对照均超时；multiplier：rIC3 2.93 秒，本方法 21.23 秒。这说明优势不是每例都更快，而是对某些困难证明找到了更有效的路线。</p>
-<p>完成的十例中，等待 Agent 响应占总耗时约 87%。表中计入端到端墙钟时间，因此不能忽略模型等待来宣传加速；token 费用和大规模部署经济性还需另行评估。</p>
-<h4 id="aic3-ablation">4.2.10 消融：批处理减少模型交互</h4>
-<p>表 3 在完整版已经解决的十例上比较：批处理将引理提议响应数从 515 降至 137，约减少 73%，两种配置都解决这十例。这里统计的是引理提议响应，不是所有 API 请求或所有 token。</p>
-<p>Observe 与 Backtrack 在部分案例有帮助，也存在不加速的案例。十例消融不能推导为在全部基准上提高多少成功率；它回答的是已完成任务的搜索和交互变化。</p>
-<h4 id="aic3-limits">4.2.11 局限、复现与研究启发</h4>
-<ul><li><strong>规模：</strong>14 个偏难案例，不是无偏的大规模竞赛排名，不能据此宣称全面最优。</li><li><strong>可重复性：</strong>需要更多设计、多次运行、跨模型和预算受控评估，以区分稳定效果与偶然成功。</li><li><strong>成本：</strong>大部分时间在等 Agent；批处理、模型选择与调用时机值得继续研究。</li><li><strong>复现：</strong>公开实现与实验配置的完整程度影响可复现性。接口实现、prompt、固定工具版本和运行轨迹是关键材料。</li><li><strong>研究问题：</strong>哪些证明状态最值得调用 LLM？怎样提前识别无价值引理？能否复用已检查的语义关系？这些问题仍需进一步实验验证。</li></ul>
-<h4 id="aic3-comparison">4.2.12 与 NeuroAbs 对照：改变题目还是改变思路？</h4>
-<table><thead><tr><th>维度</th><th>NeuroAbs</th><th>Agentic-IC3</th></tr></thead><tbody><tr><td>主要对象</td><td>送入验证器的 RTL 模型</td><td>IC3 内部证明搜索</td></tr><tr><td>LLM 输出</td><td>候选抽象改写</td><td>引理、派生观察或回退动作</td></tr><tr><td>关键检查</td><td>行为包含与反例精化</td><td>初始/相对归纳及递归证明检查</td></tr><tr><td>接入方式</td><td>场景相关预处理与精化</td><td>运行时持续反馈决策</td></tr><tr><td>主要收益</td><td>让问题更容易求解</td><td>找到更有效的证明路线</td></tr></tbody></table>
-<p>两者共享“LLM 提议，严格后端检查”的原则，但检查的对象不同。不能把 RTL 改写通过包含检查与局部引理通过归纳检查混为一谈。原文 §4.2 给出批泛化算法，§4.3–4.4 解释观察与回退，§5 展示效果与调用成本。</p>
-<h3 id="engine-code-plan">4.3 另一种接入方式：离线优化引擎代码</h3><p>LLM 也可以在研发阶段修改 IC3 的启发式实现，再通过正确性检查与性能评估筛选代码。IC3-Evolve 属于这一路线；与 Agentic-IC3 相比，模型调用发生在算法开发阶段，最终运行的引擎可以不依赖 LLM。</p>
-</section><section><h2 id="solvers">第五章 方向四：底层求解器优化</h2>
+<p>知道一道数学题的条件和结论，不代表马上知道怎样证明。形式化验证也是如此：<strong>即使电路和要求都已明确，工具仍然需要寻找合适的证明路线。</strong>找不到有效路线，就可能计算很久也得不到结果。</p>
+<p>例如，目标是证明两个控制器同时完成。与其直接处理所有复杂逻辑，不如先找出“计数器相等”“控制状态同步”等关系，再用这些关系证明最终目标。</p>
+<p>传统验证算法会根据逻辑结构和预先设计的策略寻找中间结论，但不容易像工程师那样，从代码含义中看出设计上的联系。LLM 则可以结合代码和证明过程中的反馈，帮助提出更有意义的关系。</p>
+<p>因此，这个方向的工作是：<strong>让 LLM 帮忙找证明思路，让形式化工具负责严格检查。</strong>电路和最终要求不变，改进的是证明过程。</p>
+<h3 id="agentic-ic3">4.1 Agentic-IC3：语义驱动的 IC3 证明搜索</h3>
+<p><strong>原文：</strong><a href="https://arxiv.org/html/2609.27162v1">Agentic-IC3: Enabling Semantic Proof Search in IC3 Model Checking</a>。</p>
+<p><strong>发表信息：</strong>2026 年 9 月公开的 arXiv 预印本；这里依据 v1 介绍方法，不将其标为已获会议录用。</p>
+<h4 id="aic3-problem">4.1.1 一句话理解与问题定义</h4>
+<p>Agentic-IC3 将 LLM 智能体接入 IC3 的证明过程：<strong>智能体阅读电路代码和当前证明进展，提出值得尝试的中间规律；形式化工具检查这些规律，再决定怎样继续。</strong></p>
+<p>这里的“中间规律”叫作<strong>引理</strong>。例如，最终要证明“两个控制器同时完成”，可以先尝试证明“它们的计数器保持相等”。引理是帮助完成目标的辅助结论，不是临时更换目标，也不是不经检查就能使用的假设。</p>
+<h4 id="aic3-basics">4.1.2 先理解 IC3：从可能出错的情况往回查</h4>
+<p>IC3 是一种形式化验证算法，也常称为 PDR。它要判断：<strong>电路从复位等初始状态出发，是否可能走到违反要求的状态。</strong></p>
+<p>例如检查队列会不会溢出，可以先考虑“满了却又接受写入”这种危险情况，再往回问：什么状态和输入会让它发生？这些状态能从初始状态走到吗？</p>
+<p>如果真的找到一条从初始状态通向错误的路径，就得到了反例。如果证明某些危险情况根本不可能发生，就总结出规律，把这一类情况一起排除，避免反复追查。</p>
+<p>IC3 会在不同检查层次保存已经成立的规律，这些层次叫作 <strong>frame</strong>。可以先把它理解为“不同证明阶段的记录”。某条规律在当前阶段成立，不代表它永远成立；最终需要找到一组<strong>初始成立、每次合法变化后仍成立，并且能够排除错误</strong>的规律，才能证明安全。</p>
+<h4 id="aic3-example">4.1.3 一个贯穿例子：两个控制器能否同时完成？</h4>
+<p>设想两个控制器接收相同的有效输入，装入相同计数值，然后按照同样的规则倒数。我们要检查：<strong>它们的完成信号是否始终一致。</strong>这是对论文双控制器示例的简化说明。</p>
+<div class="localize-example"><div class="localize-grid abstraction-pair">
+<div class="localize-card"><div class="localize-card-title">最终要证明什么？</div><p>控制器 A 完成时，控制器 B 也完成；A 未完成时，B 也未完成。</p><p class="localize-result">目标：两边完成信号一致。</p></div>
+<div class="localize-card"><div class="localize-card-title">可以先找什么规律？</div><p>两边装入相同计数值，更新规则相同，能否证明它们的计数器和控制状态保持同步？</p><p class="localize-result"><strong>用中间关系帮助证明最终目标。</strong></p></div>
+</div></div>
+<p>传统算法也能找到这种关系，但可能先处理大量零散的逻辑位。LLM 阅读代码后，有机会直接提出“两边保持同步”这种更接近设计含义的关系。<strong>能看出一种合理关系，不代表它已经成立；工具还需要检查。</strong>实际证明也可能需要多条引理共同配合。</p>
+<h4 id="aic3-architecture">4.1.4 方法总览：智能体和证明程序怎样配合？</h4>
+<p>图 3 展示两者的分工。可以把<strong>证明内核</strong>理解为负责维护证明记录、调用求解器并执行检查的程序；它保存进展，不会每问一次 LLM 就重新开始验证。</p>
+<figure class="paper-figure" id="aic3-figure-3"><a href="assets/agentic-ic3/figure-3.png" target="_blank" rel="noopener"><img src="assets/agentic-ic3/figure-3.png" alt="Agentic-IC3 架构：内核持有证明状态，Agent 通过 Propose、Observe、Backtrack 参与搜索。" loading="lazy" decoding="async"></a><figcaption>原文图 3：Agentic-IC3 架构：内核持有证明状态，Agent 通过 Propose、Observe、Backtrack 参与搜索。 点击打开大图。</figcaption></figure>
+<p><strong>从内核到智能体：</strong>程序提供现在想排除的危险情况、已经得到的规律，以及上一次尝试的检查结果。智能体同时能读取 RTL，了解这些状态和信号在设计中代表什么。</p>
+<p><strong>从智能体回到内核：</strong>智能体可以提出新规律、请求观察一个新的信号组合，或者建议退回前一步换路线。内核解析这些请求并检查，只有满足相应条件的结果才会进入证明记录。</p>
+<p><strong>这一循环贯穿证明过程。</strong>LLM 负责帮助选择思路，内核负责严格推理；底层 SMT 求解器仍然完成具体公式判断，并没有被 LLM 替代。</p>
+<h4 id="aic3-propose">4.1.5 第一步：提出有帮助的中间规律</h4>
+<p>遇到难题时，智能体先结合 RTL 和工具反馈，提出一个或多个候选引理。例如：“两个控制器的计数器是否一直相等？”工具会根据当前遇到的情况，采用不同方式处理。</p>
+<table><thead><tr><th>工具当前发现</th><th>智能体帮助做什么</th><th>工具接着做什么</th></tr></thead><tbody>
+<tr><td>发现一些可能走向危险状态的情况</td><td>提出一条可能排除这些情况的规律</td><td>检查规律会不会误排真实行为，并继续追查需要证明的条件</td></tr>
+<tr><td>已经排除了若干零散情况</td><td>尝试把这些事实概括成更有用的整体关系</td><td>检查新关系是否足以替代相应事实，并能在当前证明阶段成立</td></tr>
+</tbody></table>
+<p>论文把这两类内部反馈分别称为 SAT 与 UNSAT。这里仅表示<strong>某次具体查询有没有找到满足条件的状态</strong>，不直接代表整个电路有错或正确。</p>
+<p>系统还会一次整理多组情况交给智能体，而不是每发现一个状态就问一次。这叫<strong>批处理</strong>：既方便 LLM 看出共同规律，也减少频繁调用带来的等待。某个引理在前几个周期内没被推翻，还需要继续证明，不能直接当作永远成立。</p>
+<h4 id="aic3-observe">4.1.6 第二步：换一个观察角度，寻找隐藏关系</h4>
+<p>有时候单看每个数值看不出规律，组合起来却很明显。论文给出两个计数器的例子：</p>
+<table><thead><tr><th>当前是否工作</th><th>计数器 1</th><th>计数器 2</th><th>两个计数器的和</th></tr></thead><tbody><tr><td>是</td><td>1</td><td>7</td><td>8</td></tr><tr><td>是</td><td>5</td><td>3</td><td>8</td></tr><tr><td>是</td><td>6</td><td>2</td><td>8</td></tr><tr><td>否</td><td>2</td><td>3</td><td>5</td></tr></tbody></table>
+<p>两个计数器分别在变，但工作时它们的和都是 8。智能体可以请求程序在后续反馈中增加<strong>“两个计数器的和”</strong>这一观察量，从而寻找“工作时，两者之和保持为 8”这样的候选规律。</p>
+<p>这就像给数据增加一列方便观察，<strong>没有修改电路，也没有直接认定规律正确</strong>。表里几个样本符合关系，不能代替对全部情况的形式证明；实际表达式的位宽和溢出也要准确处理。</p>
+<h4 id="aic3-backtrack">4.1.7 第三步：当前路线太难，就回退换一种思路</h4>
+<p>一个看似合理的引理，可能很难证明，或者引出更多难题。智能体看到后续反馈后，可以建议放弃这次尝试，回到上级问题，换一个关系。</p>
+<p>例如，尝试证明“两个内部数值永远相等”可能太强；换成“在某个控制阶段，两者相等”也许已经足够支持目标。这是说明回退的教学例子，新提议仍需检查。</p>
+<p><strong>回退的是尚未证明的思路，不是撤销最终要求。</strong>已经被独立检查并记录的有效引理可以保留，后面的搜索继续使用，不必全部重算。提出规律、增加观察和回退，是可以反复交替的三个动作，不是只按顺序执行一次。</p>
+<h4 id="aic3-correctness">4.1.8 谁保证正确：LLM 可以猜，工具必须检查</h4>
+<p>LLM 的建议可能是错的。系统不会因为模型说“两个计数器相等”就把它当作事实，而是按它将被使用的证明阶段，检查：</p>
+<ul><li><strong>起点有没有问题：</strong>初始状态是否满足这条规律？</li><li><strong>变化后还能否保持：</strong>在相应阶段已经建立的条件下，执行一步合法状态变化，规律是否仍成立？</li><li><strong>是否解决当前问题：</strong>这条关系是否真能排除相关危险情况，或者支持已有的阻断结论？</li></ul>
+<p>检查失败就返回具体反馈，再修订或换路线；有些提议会变成需要继续递归证明的任务，不能只做一次浅层检查就接受。<strong>局部引理通过检查后，只能在其适用阶段使用；完整安全结论仍要满足 IC3 的最终证明条件。</strong></p>
+<p>因此，错误建议主要会浪费时间或导致超时，而不能绕过检查直接宣布安全。可靠性仍依赖建模、内核和求解器的正确实现；超时或未确定始终不等于证明成功。</p>
+<h4 id="aic3-results">4.1.9 实验结果：更多难题得到了解答</h4>
+<p><strong>在论文选取的 14 个较难验证案例中，Agentic-IC3 在一小时内解决了 10 个；两个对照工具 rIC3 和 A-IC3 各解决 5 个。</strong>其中 4 个案例，论文比较的三个对照工具都没有解决。</p>
+<p>这说明 LLM 指导的路线对某些难题确实有帮助，但不代表每次都更快。在已完成案例中，等待智能体响应占总时间约 87%；简单案例可能用传统算法更快。实验案例数量也较少，不能据此认定它对所有电路都更强。</p>
+</section><section>
+<h2 id="solvers">第五章 方向四：底层求解器优化</h2>
 <p>底层 SAT/SMT 为模型检查提供具体逻辑判定。LLM 可以在运行时提供策略建议，也可以在研发阶段改进求解器代码。这里选择 SATLUTION 展开后一种：最终求解器不依赖大模型在线回答。</p>
 <h3 id="satlution">5.1 SATLUTION：仓库级 SAT 求解器代码进化</h3>
 <p><strong>论文：</strong>Autonomous Code Evolution Meets NP-Completeness。PDF v1 署名 Cunxi Yu、Rongjian Liang、Chia-Tung Ho、Haoxing Ren。arXiv:2509.07367v1，2025-09-09，31 页（含附录），预印本。作者信息依据 PDF v1。<a href="https://arxiv.org/abs/2509.07367">原文与版本入口</a>。</p>
