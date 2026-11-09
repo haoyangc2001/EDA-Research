@@ -393,7 +393,7 @@ eqn{display:block;margin:1.05em 0}
 <button class="mini-btn" id="expandAll" type="button">展开</button>
 <button class="mini-btn" id="collapseAll" type="button">折叠</button>
 </div>
-<nav class="nav"><a class="nav-link lv1" href="#top">研究方向与代表方法</a><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#overview">第一章 研究范围与总体地图</a></div><div class="nav-children"><a class="nav-link lv3" href="#layers">1.1 形式化工具的四层理解</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#modeling">第二章 方向一：LLM 辅助建模与抽象简化</a></div><div class="nav-children"><a class="nav-link lv3" href="#neuroabs">2.3 NeuroAbs：基于语义理解的 RTL 抽象</a><a class="nav-link lv3" href="#na-problem">2.3.1 一句话理解与问题定义</a><a class="nav-link lv3" href="#na-flow">2.3.2 方法总览</a><a class="nav-link lv3" href="#na-localize">2.3.3 第一步：理解场景，定位候选代码</a><a class="nav-link lv3" href="#na-rewrite">2.3.4 第二步：圈定修改范围，LLM 提出简化方案</a><a class="nav-link lv3" href="#na-soundness">2.3.5 第三步：检查简化有没有漏掉真实行为</a><a class="nav-link lv3" href="#na-refine">2.3.6 第四步：根据假警报，补回必要细节</a><a class="nav-link lv3" href="#na-experiment">2.3.7 实验结果：简化后，验证能快多少？</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#orchestration">第三章 方向二：验证流程调度与编排</a></div><div class="nav-children"><a class="nav-link lv3" href="#saarthi">3.1 Saarthi：多智能体验证工作流</a><a class="nav-link lv3" href="#saarthi-problem">3.1.1 问题：能生成断言，还不等于完成验证</a><a class="nav-link lv3" href="#saarthi-roles">3.1.2 架构：专业分工和协调者</a><a class="nav-link lv3" href="#saarthi-loop">3.1.3 工作循环：按错误类型安排下一步</a><a class="nav-link lv3" href="#saarthi-grounding">3.1.4 规则手册和 GraphRAG：减少反复犯错</a><a class="nav-link lv3" href="#saarthi-trust">3.1.5 可靠性：不同检查负责不同承诺</a><a class="nav-link lv3" href="#saarthi-results">3.1.6 实验：覆盖反馈和人工参与是否有效</a><a class="nav-link lv3" href="#saarthi-limits">3.1.7 局限与在四层地图中的位置</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#engines">第四章 方向三：验证引擎内部证明搜索</a></div><div class="nav-children"><a class="nav-link lv3" href="#agentic-ic3">4.1 Agentic-IC3：语义驱动的 IC3 证明搜索</a><a class="nav-link lv3" href="#aic3-problem">4.1.1 一句话理解与问题定义</a><a class="nav-link lv3" href="#aic3-basics">4.1.2 先理解 IC3：从可能出错的情况往回查</a><a class="nav-link lv3" href="#aic3-example">4.1.3 一个贯穿例子：两个控制器能否同时完成？</a><a class="nav-link lv3" href="#aic3-architecture">4.1.4 方法总览：智能体和证明程序怎样配合？</a><a class="nav-link lv3" href="#aic3-propose">4.1.5 第一步：提出有帮助的中间规律</a><a class="nav-link lv3" href="#aic3-observe">4.1.6 第二步：换一个观察角度，寻找隐藏关系</a><a class="nav-link lv3" href="#aic3-backtrack">4.1.7 第三步：当前路线太难，就回退换一种思路</a><a class="nav-link lv3" href="#aic3-correctness">4.1.8 谁保证正确：LLM 可以猜，工具必须检查</a><a class="nav-link lv3" href="#aic3-results">4.1.9 实验结果：更多难题得到了解答</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#solvers">第五章 方向四：底层求解器优化</a></div><div class="nav-children"><a class="nav-link lv3" href="#satlution">5.1 SATLUTION：仓库级 SAT 求解器代码进化</a><a class="nav-link lv3" href="#sat-problem">5.1.1 问题：求解器内部策略很难人工调好</a><a class="nav-link lv3" href="#sat-flow">5.1.2 接入方式：离线研发，在线运行普通求解器</a><a class="nav-link lv3" href="#sat-edits">5.1.3 修改什么：策略代码、集成与规则</a><a class="nav-link lv3" href="#sat-correctness">5.1.4 为什么“更快”不能靠猜答案</a><a class="nav-link lv3" href="#sat-performance">5.1.5 评价：PAR-2、独立年份测试与硬件条件</a><a class="nav-link lv3" href="#sat-cost">5.1.6 成本、失败与适用范围</a><a class="nav-link lv3" href="#sat-takeaway">5.1.7 接入范式与研究空间</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#comparison">第六章 跨方向比较与研究机会</a></div><div class="nav-children"></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#references">附录 术语与参考资料</a></div><div class="nav-children"></div></div></nav>
+<nav class="nav"><a class="nav-link lv1" href="#top">研究方向与代表方法</a><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#overview">第一章 研究范围与总体地图</a></div><div class="nav-children"><a class="nav-link lv3" href="#layers">1.1 形式化工具的四层理解</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#modeling">第二章 方向一：LLM 辅助建模与抽象简化</a></div><div class="nav-children"><a class="nav-link lv3" href="#neuroabs">2.3 NeuroAbs：基于语义理解的 RTL 抽象</a><a class="nav-link lv3" href="#na-problem">2.3.1 一句话理解与问题定义</a><a class="nav-link lv3" href="#na-flow">2.3.2 方法总览</a><a class="nav-link lv3" href="#na-localize">2.3.3 第一步：理解场景，定位候选代码</a><a class="nav-link lv3" href="#na-rewrite">2.3.4 第二步：圈定修改范围，LLM 提出简化方案</a><a class="nav-link lv3" href="#na-soundness">2.3.5 第三步：检查简化有没有漏掉真实行为</a><a class="nav-link lv3" href="#na-refine">2.3.6 第四步：根据假警报，补回必要细节</a><a class="nav-link lv3" href="#na-experiment">2.3.7 实验结果：简化后，验证能快多少？</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#orchestration">第三章 方向二：验证流程调度与编排</a></div><div class="nav-children"><a class="nav-link lv3" href="#saarthi">3.1 Saarthi：多智能体验证工作流</a><a class="nav-link lv3" href="#saarthi-problem">3.1.1 一句话理解与问题定义</a><a class="nav-link lv3" href="#saarthi-roles">3.1.2 方法总览：像一个分工协作的验证团队</a><a class="nav-link lv3" href="#saarthi-plan">3.1.3 第一步：把需求拆成明确的检查任务</a><a class="nav-link lv3" href="#saarthi-loop">3.1.4 第二步：运行工具，根据报错返回相应环节</a><a class="nav-link lv3" href="#saarthi-grounding">3.1.5 第三步：查资料、记住错误，减少反复返工</a><a class="nav-link lv3" href="#saarthi-trust">3.1.6 谁保证正确：工具检查与人工审核各有作用</a><a class="nav-link lv3" href="#saarthi-results">3.1.7 实验结果：加入反馈与人工修正，可以补上更多遗漏</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#engines">第四章 方向三：验证引擎内部证明搜索</a></div><div class="nav-children"><a class="nav-link lv3" href="#agentic-ic3">4.1 Agentic-IC3：语义驱动的 IC3 证明搜索</a><a class="nav-link lv3" href="#aic3-problem">4.1.1 一句话理解与问题定义</a><a class="nav-link lv3" href="#aic3-basics">4.1.2 先理解 IC3：从可能出错的情况往回查</a><a class="nav-link lv3" href="#aic3-example">4.1.3 一个贯穿例子：两个控制器能否同时完成？</a><a class="nav-link lv3" href="#aic3-architecture">4.1.4 方法总览：智能体和证明程序怎样配合？</a><a class="nav-link lv3" href="#aic3-propose">4.1.5 第一步：提出有帮助的中间规律</a><a class="nav-link lv3" href="#aic3-observe">4.1.6 第二步：换一个观察角度，寻找隐藏关系</a><a class="nav-link lv3" href="#aic3-backtrack">4.1.7 第三步：当前路线太难，就回退换一种思路</a><a class="nav-link lv3" href="#aic3-correctness">4.1.8 谁保证正确：LLM 可以猜，工具必须检查</a><a class="nav-link lv3" href="#aic3-results">4.1.9 实验结果：更多难题得到了解答</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#solvers">第五章 方向四：底层求解器优化</a></div><div class="nav-children"><a class="nav-link lv3" href="#satlution">5.1 SATLUTION：用智能体迭代改进 SAT 求解器代码</a><a class="nav-link lv3" href="#sat-problem">5.1.1 一句话理解与问题定义</a><a class="nav-link lv3" href="#sat-flow">5.1.2 方法总览：从修改代码到评估反馈</a><a class="nav-link lv3" href="#sat-edits">5.1.3 第一步：选择修改方向，改动实际代码</a><a class="nav-link lv3" href="#sat-correctness">5.1.4 第二步：先检查能否运行、答案是否正确</a><a class="nav-link lv3" href="#sat-evaluate">5.1.5 第三步：用一批题目测试，保留有效改进</a><a class="nav-link lv3" href="#sat-control">5.1.6 规则与人工参与：约束智能体的修改</a><a class="nav-link lv3" href="#sat-performance">5.1.7 实验结果：在作者测试中，比冠军基线多解出 13 题</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#comparison">第六章 跨方向比较与研究机会</a></div><div class="nav-children"></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#references">附录 术语与参考资料</a></div><div class="nav-children"></div></div></nav>
 </aside>
 <div class="mask" id="mask"></div>
 <main class="doc" id="doc"><header class="doc-hero"><h1 id="top">大模型与智能体赋能硬件形式化验证：方向总览与论文解读</h1><blockquote><p>大模型如何帮助形式化验证：从 RTL 抽象、验证流程编排，到证明搜索与求解器优化。</p></blockquote></header><section><h2 id="overview">第一章 研究范围与总体地图</h2>
@@ -512,40 +512,39 @@ end</code></pre>
 <p>实验覆盖四个电路设计、55 个验证场景。换用 rIC3 后端时，平均证明时间从约 18.71 秒降至 16.94 秒，收益较小；部分暂时无法完成完整证明的任务，则能在相同时间内检查更多周期。也就是说，<strong>简化确实可能帮助验证，但效果取决于电路、验证目标和后端工具。</strong></p>
 <p>实验还发现，LLM 直接复制原代码也能通过可靠性检查，却几乎没有简化价值。因此，这套方法既要保证<strong>“改得可靠”</strong>，也要做到<strong>“确实减少计算负担”</strong>。实际使用时，还需把生成、检查和恢复细节的时间一起计算，判断整体是否划算。</p>
 </section><section><h2 id="orchestration">第三章 方向二：验证流程调度与编排</h2>
-<p>验证编排包括流程组织和引擎资源调度。流程组织连接规格理解、属性生成、编译、证明和覆盖分析；资源调度则决定引擎选择与计算预算。Saarthi 展示的是前一种能力。</p>
+<p>完成一次形式化验证，不只是把电路交给工具计算。工程师还要读需求、写检查规则、处理报错，再确认有没有遗漏。<strong>这个方向希望让智能体把这些步骤组织起来，减少人工来回操作。</strong></p>
+<p>例如，要检查“收到请求后，两周期内必须响应”。首先要把要求写成工具能识别的断言，然后运行工具。如果写法有误，需要修改；如果检查失败，需要分析原因；如果遗漏了其他重要行为，还需要补充规则。</p>
+<p>传统脚本可以自动执行固定步骤，但面对不同的错误，往往仍需工程师判断下一步做什么。LLM 可以阅读需求和工具报告，帮助分配任务、修改产物，再调用工具重新检查。</p>
+<p><strong>这里改进的是验证工作的组织方式。</strong>流程编排负责连接各项工作；选择 IC3、BMC 等证明引擎、分配计算资源则是另一类调度问题。下面的 Saarthi 主要研究前者。</p>
 <h3 id="saarthi">3.1 Saarthi：多智能体验证工作流</h3>
-<p><strong>论文：</strong>Saarthi for AGI: Towards Domain-Specific General Intelligence for Formal Verification。Aman Kumar、Deepak Narayan Gadde、Luu Danh Minh、Vaisakh Naduvodi Viswambharan、Keerthan Kopparam Radhakrishna、Sivaram Pothireddypalli，Infineon。论文版本：arXiv:2603.03175v1，共 12 页，预印本。<a href="https://arxiv.org/abs/2603.03175">原文及版本记录</a>。</p>
-<p><strong>研究沿革与版本边界：</strong>这一框架的前作是 <a href="https://arxiv.org/abs/2502.16662">Saarthi: The First AI Formal Verification Engineer（DVCon U.S. 2025）</a>。前作建立流程编排，本节选择的 2026 年后续论文进一步加入规则手册、GraphRAG 与覆盖反馈。两篇的作者列表、模型、设计集合和表格不同：本节六设计、GPT-5、HIL 对照来自 2026 年论文，不与 2025 年十五设计实验混用。另有 <a href="https://arxiv.org/abs/2603.03147">Agentic AI-based Coverage Closure for Formal Verification（2026）</a> 专门研究覆盖率闭环，侧重覆盖率闭环。它们的贡献集中于流程级自动化。</p>
-<h4 id="saarthi-problem">3.1.1 问题：能生成断言，还不等于完成验证</h4>
-<p>一条断言从文字要求到正式验证，要经历理解接口、绑定信号、语法检查、证明、反例解释、空真检查和覆盖反馈。任何一步出错都可能让流程停住。论文研究如何将这些工作拆成专门角色，再通过反馈组织起来。</p>
-<p>例如：验证“请求后两周期内收到响应”。生成器可能写错时钟沿，修复后又绑定错信号，最终证明通过却发现请求从未发生。把一次生成看作完成任务，会忽略后续工作；编排层需要知道下一步该运行什么检查、把失败交给哪个角色。</p>
-<h4 id="saarthi-roles">3.1.2 架构：专业分工和协调者</h4>
-<p>Saarthi 基于 Microsoft AutoGen，支持顺序或层次执行；论文明确说明实验中的形式化流程按顺序安排角色。架构图的多角色不能直接理解为这些角色在实验中全部并行执行。</p>
-<table><thead><tr><th>角色</th><th>主要工作</th><th>反馈去向</th></tr></thead><tbody><tr><td>Formal verification lead</td><td>组织验证计划与工作顺序</td><td>分派生成、修复与覆盖任务</td></tr><tr><td>属性生成与评审</td><td>从规格形成候选 SVA，检查规则符合性与完整性</td><td>修改候选，绑定模块和信号</td></tr><tr><td>语法分析、修复、验证</td><td>识别解析或编译错误，修复并重新检查</td><td>失败进入修复循环</td></tr><tr><td>覆盖分析</td><td>定位遗漏行为与插入位置，提出新属性需求</td><td>回到属性生成</td></tr><tr><td>代码提取与执行</td><td>落地生成产物、接入环境、调用检查</td><td>返回工具诊断与证明报告</td></tr></tbody></table>
-<figure class="paper-figure"><a href="assets/saarthi/figure-3.png" target="_blank" rel="noopener"><img src="assets/saarthi/figure-3.png" alt="多Agent角色与执行入口，来自原文图3。" loading="lazy"></a><figcaption>多Agent角色与执行入口，来自原文图3。 点击查看大图。</figcaption><p class="source">来源：<a href="https://arxiv.org/pdf/2603.03175v1#page=4">原文v1，第4页</a>；原图裁剪，附中文说明。</p></figure><h4 id="saarthi-loop">3.1.3 工作循环：按错误类型安排下一步</h4>
-<pre><code>规格与 RTL → 计划与候选属性 → 语法/编译检查
-                              ↓
-                     形式化执行与报告
-                              ↓
-    语法错误回修复 / 失败与空真回分析 / 覆盖缺口回生成
-                              ↓
-           达到预设停止条件，或触发人工参与</code></pre>
-<p>论文给出迭代上限，无法收敛时进入 HIL（human-in-the-loop）。人工修改后的提示、上下文、错误类型和修复结果会记录到案例库。这里的“学习”可以是缓存与提示更新，不能一概理解为对模型参数训练。</p>
-<h4 id="saarthi-grounding">3.1.4 规则手册和 GraphRAG：减少反复犯错</h4>
-<p>规则手册把信号、时钟、条件和时间窗口写成结构化描述，记录常见错误。RAG 提供标准、规格等文本证据；GraphRAG 将需求、信号、属性和证明结果建立关系，便于跨资料检索。</p>
-<p>例如：检查总线最后一拍，既要找到长度字段的含义，也要知道只有握手成功才增加拍数。图检索可以把这些分散规则一起提供给生成器。检索有助于理解，但检索到一段文字不等于已证明当前断言准确。</p>
-<h4 id="saarthi-trust">3.1.5 可靠性：不同检查负责不同承诺</h4>
-<ul><li>评审 Agent 提供建议，不能代替可执行的语法与形式化检查。</li><li>编译通过只说明语法和绑定可被工具接受，不说明性质符合规格。</li><li>证明通过针对给定假设与属性，不代表属性完整或非空真。</li><li>覆盖与人工审核仍重要；修复时尤其不能为追求通过率而随意削弱性质、增加假设。</li></ul>
-<p>论文展示规则、工具反馈和 HIL 的工程闭环，没有给出整个多 Agent 流程的数学正确性证明。标题中的 AGI 是作者愿景，不能当作已实现通用智能的结论。</p>
-<h4 id="saarthi-results">3.1.6 实验：覆盖反馈和人工参与是否有效</h4>
-<p>实验比较 GPT-4.1、GPT-5 和 Llama 3.3，六个 RTL 设计包含 ECC、Automotive IP、Memory Scheduler、AXI4Lite、CIC Decimator、Float Multiplier。Pass@1/2/3 是论文相应生成/尝试设置，不能理解为芯片通过签核的概率。</p>
-<table><thead><tr><th>设计</th><th>GPT-5 无 HIL 覆盖</th><th>GPT-5 有 HIL 覆盖</th></tr></thead><tbody><tr><td>ECC</td><td>92.83%</td><td>95.22%</td></tr><tr><td>Memory Scheduler</td><td>50.00%</td><td>62.02%</td></tr><tr><td>AXI4Lite</td><td>44.06%</td><td>67.06%</td></tr><tr><td>Float Multiplier</td><td>64.72%</td><td>92.83%</td></tr></tbody></table>
-<p>以上取自表 II 的 Pass@1 对照，不能混同于模型间比较或全部无人工自动完成。覆盖数字需要结合工具口径解释，不能解释为覆盖同等比例的所有状态或规格。</p>
-<p>表 III 显示重复自动生成不保证持续改善：Automotive IP 断言从 59 增至 233，覆盖反而从 80.56% 降至 72.69%；Float Multiplier 覆盖则从 64.72% 升至 82.45%。这是“更多断言不等于更充分验证”的直接例子。正文称 Automotive 覆盖稳定改善，与表中趋势不一致，表中数据表明，迭代生成的覆盖收益并不单调。</p>
-<h4 id="saarthi-limits">3.1.7 局限与在四层地图中的位置</h4>
-<p>这是一篇工作流编排代表论文，不是多引擎资源调度的 SOTA 证据。样本六个，规格质量和 HIL 影响较大；规则、RAG、角色分工各自收益还需更严格消融；完整实现与实验配置的公开程度也影响可复现性。摘要中的“准确率提高70%、迭代减少50%”缺乏本节可直接对应的统一比较口径，因此不作为主结论。</p>
-<p>值得研究：怎样根据错误类型选择下一个动作？何时停止低收益循环？如何追踪“原始需求→属性→证据”的一致性？以后可继续寻找真正根据引擎进展分配资源的 LLM 研究，补足本层另一部分。</p>
-</section><section><h2 id="engines">第四章 方向三：验证引擎内部证明搜索</h2>
+<p><strong>原文：</strong><a href="https://arxiv.org/html/2603.03175v1">Saarthi for AGI: Towards Domain-Specific General Intelligence for Formal Verification</a>。</p>
+<p><strong>发表信息：</strong>2026 年 arXiv 预印本；框架前作发表于 DVCon U.S. 2025，这是侧重芯片设计与验证实践的专业技术会议。本节方法和实验依据 2026 年后续论文，不混用前作的数据。</p>
+<h4 id="saarthi-problem">3.1.1 一句话理解与问题定义</h4>
+<p>Saarthi 将不同工作交给不同智能体，<strong>有人负责规划，有人写规则，有人改语法错误，有人检查遗漏，再由执行程序调用形式化工具。</strong>系统根据报告决定回到哪一步继续处理。</p>
+<p>这里的智能体可以理解为“配有任务说明和可用工具的 LLM 角色”，不必是彼此独立训练的模型。多个角色并不自动意味着并行执行；论文中的验证流程采用顺序安排。</p>
+<h4 id="saarthi-roles">3.1.2 方法总览：像一个分工协作的验证团队</h4>
+<figure class="paper-figure"><a href="assets/saarthi/figure-3.png" target="_blank" rel="noopener"><img src="assets/saarthi/figure-3.png" alt="多Agent角色与执行入口，来自原文图3。" loading="lazy"></a><figcaption>多Agent角色与执行入口，来自原文图3。 点击查看大图。</figcaption></figure>
+<p><strong>图的上方负责协调：</strong>验证负责人整理要检查的要求、安排任务。中间几组角色分别负责生成断言、修复语法、检查覆盖情况。下方的代码提取与执行程序，把生成的内容接入验证环境，并运行工具。</p>
+<p>图中的反馈连接表示：<strong>工具运行一次不是终点，报告会决定下一步继续做什么。</strong>不需要记住所有角色名称，关键是分清“提出内容、运行检查、根据结果安排下一步”三个职责。</p>
+<h4 id="saarthi-plan">3.1.3 第一步：把需求拆成明确的检查任务</h4>
+<p>假设一个模块负责接收请求并返回结果。设计说明可能同时要求：请求不能丢失、结果顺序正确、复位后没有残留响应。负责规划的角色先把这些内容整理成检查清单，再分派给生成角色。</p>
+<p>生成角色将文字要求转成 <strong>SVA 断言，也就是可以让形式化工具执行检查的规则</strong>。同时需要找到真实信号名、时钟和复位条件。写出一句合理要求，不代表已经正确对应到电路代码，所以还要进入后面的检查。</p>
+<h4 id="saarthi-loop">3.1.4 第二步：运行工具，根据报错返回相应环节</h4>
+<p>系统先检查规则能否被工具读懂，再执行形式化验证。不同报告需要不同处理：</p>
+<table><thead><tr><th>遇到的情况</th><th>通俗解释</th><th>接下来做什么</th></tr></thead><tbody><tr><td>语法或信号错误</td><td>规则写法不合法，或引用了不存在的名字</td><td>修改规则，再编译检查</td></tr><tr><td>发现反例</td><td>有一条执行过程违反规则</td><td>核对设计、规则和环境条件，定位原因</td></tr><tr><td>空真通过</td><td>例如“有请求就响应”通过了，但前提中的请求根本不可能出现</td><td>检查触发条件和环境设置</td></tr><tr><td>还有覆盖缺口</td><td>现有规则没有充分检查某些相关逻辑或行为</td><td>提出新的检查任务，再生成规则</td></tr></tbody></table>
+<p><strong>发现反例不等于直接修改 RTL。</strong>可能是电路真的有错，也可能是断言误解了需求或环境设置有问题。需要保留原始要求，不能为了得到“通过”而随意放宽规则。</p>
+<h4 id="saarthi-grounding">3.1.5 第三步：查资料、记住错误，减少反复返工</h4>
+<p>智能体可能不熟悉协议，也可能反复写错复位条件。Saarthi 用<strong>规则手册</strong>记录写法约定和已知错误，用检索帮助模型找到规格依据。</p>
+<p>RAG 可以理解为“回答前先查相关资料”；GraphRAG 进一步把资料之间的关系连起来，例如“这个需求对应哪个信号、哪条断言、什么证明结果”。它们帮助模型获得背景，<strong>不是新的数学证明机制。</strong></p>
+<p>系统还会记录人工修正过的案例。以后遇到类似错误，可以参考过去的处理方式。这里主要是利用已有记录，不代表每次运行都训练了模型参数。</p>
+<h4 id="saarthi-trust">3.1.6 谁保证正确：工具检查与人工审核各有作用</h4>
+<p><strong>智能体负责提出内容和安排任务，形式化工具负责检查给定规则。</strong>编译通过只说明写法可接受；证明通过也只针对写下的规则，不能保证没有遗漏要求。</p>
+<p>因此还需要检查规则有没有真正触发、覆盖了哪些内容，以及是否忠实于规格。系统多次尝试仍无法解决时，会引入人工参与。标题中的 AGI 是作者愿景，并不表示已经实现通用智能。</p>
+<h4 id="saarthi-results">3.1.7 实验结果：加入反馈与人工修正，可以补上更多遗漏</h4>
+<p><strong>论文的 AXI4Lite 测试中，GPT-5 配置加入人工参与后，报告覆盖率从约 44% 提高到 67%；浮点乘法器从约 65% 提高到 93%。</strong>这组结果包含人工贡献，不能理解成完全自动化的提升。</p>
+<p>实验覆盖六个设计。覆盖率是工具采用的检查指标，不代表同等比例的全部设计需求已被证明。论文也出现断言变多、覆盖反而下降的情况，说明<strong>重复生成不一定有用，关键仍是规则是否准确、是否补上实际缺口。</strong>这些实验没有单独证明流程编排比人工或固定脚本节省多少时间。</p>
+</section><section>
+<h2 id="engines">第四章 方向三：验证引擎内部证明搜索</h2>
 <p>知道一道数学题的条件和结论，不代表马上知道怎样证明。形式化验证也是如此：<strong>即使电路和要求都已明确，工具仍然需要寻找合适的证明路线。</strong>找不到有效路线，就可能计算很久也得不到结果。</p>
 <p>例如，目标是证明两个控制器同时完成。与其直接处理所有复杂逻辑，不如先找出“计数器相等”“控制状态同步”等关系，再用这些关系证明最终目标。</p>
 <p>传统验证算法会根据逻辑结构和预先设计的策略寻找中间结论，但不容易像工程师那样，从代码含义中看出设计上的联系。LLM 则可以结合代码和证明过程中的反馈，帮助提出更有意义的关系。</p>
@@ -601,42 +600,39 @@ end</code></pre>
 <p>这说明 LLM 指导的路线对某些难题确实有帮助，但不代表每次都更快。在已完成案例中，等待智能体响应占总时间约 87%；简单案例可能用传统算法更快。实验案例数量也较少，不能据此认定它对所有电路都更强。</p>
 </section><section>
 <h2 id="solvers">第五章 方向四：底层求解器优化</h2>
-<p>底层 SAT/SMT 为模型检查提供具体逻辑判定。LLM 可以在运行时提供策略建议，也可以在研发阶段改进求解器代码。这里选择 SATLUTION 展开后一种：最终求解器不依赖大模型在线回答。</p>
-<h3 id="satlution">5.1 SATLUTION：仓库级 SAT 求解器代码进化</h3>
-<p><strong>论文：</strong>Autonomous Code Evolution Meets NP-Completeness。PDF v1 署名 Cunxi Yu、Rongjian Liang、Chia-Tung Ho、Haoxing Ren。arXiv:2509.07367v1，2025-09-09，31 页（含附录），预印本。作者信息依据 PDF v1。<a href="https://arxiv.org/abs/2509.07367">原文与版本入口</a>。</p>
-<h4 id="sat-problem">5.1.1 问题：求解器内部策略很难人工调好</h4>
-<p>SAT 判断是否存在一组真假取值满足全部约束。现代 CDCL 求解器依靠分支、重启、子句管理、预处理等大量策略，修改一处可能影响其他环节。SATLUTION 研究 LLM 编程智能体能否在真实 C/C++ 仓库中迭代改进，而非只写一个独立函数。</p>
-<p>例如：频繁清理子句可以减少内存，却可能删除以后很有用的信息；保留太多子句又使传播变慢。收益依赖实际问题，不能只凭代码看起来更简洁来判断。</p>
-<h4 id="sat-flow">5.1.2 接入方式：离线研发，在线运行普通求解器</h4>
-<pre><code>现有求解器仓库 + 规则 + 基准反馈
-                  ↓
-Planning Agent：提出修改方向
-                  ↓
-Coding Agent：修改、编译、调试仓库
-                  ↓
-正确性关卡 → 分布式性能评估 → 反馈 → 下一轮
-                  ↓
-       最终 C/C++ 求解器独立部署</code></pre>
-<p>Planning/Coding 是角色，不必是两个不同模型。论文使用 Cursor 工作流，结合 Claude 与 GPT 模型，附录给出模型使用分布。Agent 还维护修改假设、变更和结果日志。种子为五个 SAT Competition 2024 求解器仓库，演化反馈使用 2024 的 400 个实例。</p>
-<figure class="paper-figure"><a href="assets/satlution/figure-9.png" target="_blank" rel="noopener"><img src="assets/satlution/figure-9.png" alt="仓库级代码进化、规则与评估反馈循环，来自原文图9。" loading="lazy"></a><figcaption>仓库级代码进化、规则与评估反馈循环，来自原文图9。 点击查看大图。</figcaption><p class="source">来源：<a href="https://arxiv.org/pdf/2509.07367v1#page=11">原文v1，第11页</a>；原图裁剪，附中文说明。</p></figure><h4 id="sat-edits">5.1.3 修改什么：策略代码、集成与规则</h4>
-<p>搜索范围包含启发式、参数、模块集成、内存/数据结构及工程实现；论文并非证明找到了新的通用 SAT 理论算法。每次根据上一轮编译错误、崩溃、结果和耗时提出下一步方案。</p>
-<p>规则手册也随失败更新：例如禁止不经过证明检查直接宣告结果，要求使用合适内存管理并记录变更。这些防护限制了无意义或危险的搜索方向，但规则自我更新不能替代不可绕过的外部验证。</p>
-<h4 id="sat-correctness">5.1.4 为什么“更快”不能靠猜答案</h4>
-<table><thead><tr><th>关卡</th><th>检查</th><th>失败处理</th></tr></thead><tbody><tr><td>编译与冒烟测试</td><td>能否构建，是否崩溃或出现明显异常</td><td>返回代码修复</td></tr><tr><td>SAT 结果检查</td><td>返回的变量赋值是否满足原公式</td><td>拒绝错误变体</td></tr><tr><td>UNSAT 结果检查</td><td>用外部检查器核验 DRAT 证明</td><td>拒绝无效证明</td></tr><tr><td>性能测量</td><td>正确结果下统计解决数、时间、内存</td><td>比较候选价值并反馈</td></tr></tbody></table>
-<p>某个版本在已测实例给出可验证结果，不等于这个求解器程序对所有输入都已被证明正确。对部署中的新实例仍要检查证据。外部检查器和评估协议属于可信基础，不能让 Agent 修改评分器来制造加速。</p>
-<p>原文图 10 明确说明第二阶段反馈流程由作者手工设计；附录 Discussion 也承认完全自动运行表现不佳，后期采用人引导高层方向、Agent 负责实现的半自动模式。“自主进化”不能被解读为全程无人参与。</p>
-<figure class="paper-figure"><a href="assets/satlution/figure-10.png" target="_blank" rel="noopener"><img src="assets/satlution/figure-10.png" alt="候选求解器的编译与正确性检查，来自原文图10。" loading="lazy"></a><figcaption>候选求解器的编译与正确性检查，来自原文图10。 点击查看大图。</figcaption><p class="source">来源：<a href="https://arxiv.org/pdf/2509.07367v1#page=14">原文v1，第14页</a>；原图裁剪，附中文说明。</p></figure><h4 id="sat-performance">5.1.5 评价：PAR-2、独立年份测试与硬件条件</h4>
-<p>PAR-2 将超时实例按两倍超时记分，再计算平均值，越低越好。例如超时设为5000秒，则未解决实例计10000秒。这同时惩罚慢解和未解，但不能表示算法的理论复杂度下降。</p>
-<p>作者使用2024实例反馈进行进化，再用2025实例测试迁移。2025集合上，作者环境中的最优三个变体分别解决347、345、344例，两名官方优胜者在相同作者环境中解决334、331例。官方比赛中两者数字为327、321，硬件不同不能直接拼接比较。</p>
-<p><strong>应表述为：</strong>作者在自己的实验环境中，获得超过所比较竞赛冠军基线的成绩。<strong>不应表述为：</strong>SATLUTION获得SAT Competition 2025官方冠军。</p>
-<h4 id="sat-cost">5.1.6 成本、失败与适用范围</h4>
-<p>论文报告约70轮迭代，每轮在2024的400例上测量，并使用800个CPU节点的分布式评估环境，约一小时得到一轮反馈。这是研发阶段的大量计算投入；部署时没有LLM开销，并不意味着研发成本低。</p>
-<p>图8记载：11个变体在部分实例崩溃，4个未通过功能/证明验证，9个明显退化。这些失败类型可能重叠，不相加作为独立失败总数。检查和淘汰机制是方法的一部分，不是模型总能一次生成更好代码。</p>
-<p>评估针对通用SAT；没有直接证明将其接入IC3、LEC或RTL验证后也同样改善。模型检查常涉及增量SAT调用和特定公式分布，独立SAT竞赛成绩必须用真实调用工作负载补测。完整进化流程的可复现性还取决于代码、提示词与评估配置是否公开。</p>
-<h4 id="sat-takeaway">5.1.7 接入范式与研究空间</h4>
-<p>接入范式是“LLM修改算法实现→不可绕过的结果检查→受控性能反馈→保留有价值变体”。相较Agentic-IC3，它把模型调用成本移到研发阶段，而非证明时持续调用。</p>
-<p>值得研究：能否缩小到一个启发式模块降低迭代成本？怎样设计独立测试防止过拟合？优化增量SAT而非独立SAT能否带来更直接的硬件验证收益？这些问题仍需要面向真实验证工作负载的实验。</p>
-</section><section><h2 id="comparison">第六章 跨方向比较与研究机会</h2><table><thead><tr><th>维度</th><th>统一记录的问题</th></tr></thead><tbody><tr><td>接入位置</td><td>改变模型、调度、证明路线还是求解器代码？</td></tr><tr><td>接入时间</td><td>离线开发、每实例预处理，还是证明中反复调用？</td></tr><tr><td>可靠性</td><td>哪些是猜测？什么检查后才生效？可信基础有哪些？</td></tr><tr><td>性能</td><td>总时间、解决数、内存、模型费用与波动是否计入？</td></tr><tr><td>泛化</td><td>训练/调参/测试是否分离，跨设计家族是否有效？</td></tr><tr><td>复现</td><td>代码、基准、工具版本与授权是否可获得？</td></tr></tbody></table><p>四种方法分别改变模型、工作流程、证明路线与求解器实现。它们的共同点是将 LLM 的提议能力与严格工具的检查能力结合；收益必须结合模型成本、任务难度和验证后端判断。流程自动化不等于引擎调度优化，通用 SAT 的性能提升也需要经过硬件验证工作负载检验。</p></section><section><h2 id="references">附录 术语与参考资料</h2><table><thead><tr><th>术语</th><th>含义</th></tr></thead><tbody><tr><td>属性 / 断言</td><td>希望设计满足的精确规则</td></tr><tr><td>过近似</td><td>保留原行为，允许额外行为的抽象</td></tr><tr><td>SMT</td><td>处理位向量、算术等理论约束的可满足性问题</td></tr><tr><td>CEGAR</td><td>根据虚假反例逐步恢复必要模型细节</td></tr><tr><td>AST</td><td>表示代码语法结构的树</td></tr><tr><td>IC3/PDR</td><td>通过引理与归纳关系证明安全或寻找反例的模型检查方法</td></tr></tbody></table><ol><li><a href="https://arxiv.org/html/2608.17304v1">NeuroAbs，v1 全文</a>：§3 方法；§3.4 包含检查；§3.5 R-CEGAR；§4 实验。</li><li><a href="https://arxiv.org/abs/2609.27162">Agentic-IC3</a>：§4.2 批泛化，§4.3–4.4 观察与回退，§5 表 2–3 实验。</li><li><a href="https://arxiv.org/abs/2509.07367">SATLUTION 原论文</a>：后续求解器章节候选。</li><li><a href="https://www.cse.cuhk.edu.hk/~byu/papers/C312-ASPDAC2026-Verif.pdf">LLM-Assisted Circuit Verification: A Comprehensive Survey</a>：领域入口，包含广义功能验证。</li></ol><p>数据来源：所列论文的固定版本。实验结果均为原论文报告，未作独立复现；不同论文的基准、硬件与预算不同，数字不作跨任务排名。</p></section></main>
+<p>形式化工具会把许多具体判断交给底层求解器。例如：“有没有一组输入，能让这些条件同时成立？”<strong>求解器算得更快，上层验证就有机会更快完成。</strong></p>
+<p>SAT 是其中一种问题：所有变量只能取真或假，需要判断能不能同时满足一组逻辑条件。求解器虽然有成熟算法，但先尝试哪个变量、何时重新搜索、保留哪些推理信息，都会影响速度。</p>
+<p>传统上，这些策略由研究者手工设计、修改代码并反复测试。LLM 编程智能体则可以帮助提出和实现修改，再根据测试结果继续优化。<strong>这个方向关注的是改进求解器本身，不是让 LLM 直接猜验证结论。</strong></p>
+<h3 id="satlution">5.1 SATLUTION：用智能体迭代改进 SAT 求解器代码</h3>
+<p><strong>原文：</strong><a href="https://arxiv.org/html/2509.07367v1">Autonomous Code Evolution Meets NP-Completeness</a>。</p>
+<p><strong>发表信息：</strong>2025 年公开的 arXiv 预印本；这里依据 v1 介绍方法，不将其标为会议获奖或官方竞赛冠军。</p>
+<h4 id="sat-problem">5.1.1 一句话理解与问题定义</h4>
+<p>SATLUTION 让 LLM 智能体在已有 SAT 求解器的代码仓库中提出修改，<strong>改完就编译、检查结果、测量速度，再根据反馈决定下一轮怎么改。</strong>最后得到的是可以独立运行的求解器，实际求解时不必再调用 LLM。</p>
+<p>可以类比优化一台机器：改动一个零件，既要确认机器仍能正常工作，也要测量是否真的更快。代码写得更短或看起来更聪明，不代表求解性能更好。</p>
+<h4 id="sat-flow">5.1.2 方法总览：从修改代码到评估反馈</h4>
+<figure class="paper-figure"><a href="assets/satlution/figure-9.png" target="_blank" rel="noopener"><img src="assets/satlution/figure-9.png" alt="仓库级代码进化、规则与评估反馈循环，来自原文图9。" loading="lazy"></a><figcaption>仓库级代码进化、规则与评估反馈循环，来自原文图9。 点击查看大图。</figcaption></figure>
+<p><strong>图左侧负责提出和实现修改：</strong>规划角色选择改进方向，编程角色修改实际代码。中间保留求解器仓库；右侧检查能否编译、答案是否正确；下方通过基准测试返回性能反馈。</p>
+<p>已有修改记录和规则会帮助下一轮避免重复犯错。<strong>LLM 的调用发生在研发阶段，评估通过后，最终程序仍按普通求解器的方式运行。</strong></p>
+<h4 id="sat-edits">5.1.3 第一步：选择修改方向，改动实际代码</h4>
+<p>求解器会积累许多推理得到的条件，这些条件叫作<strong>子句</strong>。保留它们有助于避免重复搜索，但太多又可能拖慢计算。何时清理、清理哪些，就是一个可以优化的方向。</p>
+<p>智能体可以调整这类搜索策略，也可以改参数、数据结构、内存管理或模块组合。它修改的是实际 C/C++ 工程，而不是只生成一个脱离原系统的小函数。这里没有假定某种修改一定有效，必须交给后续测试。</p>
+<h4 id="sat-correctness">5.1.4 第二步：先检查能否运行、答案是否正确</h4>
+<p>程序首先需要通过编译和简单测试。但<strong>运行不崩溃，不代表答案正确</strong>，所以还需要检查求解器提供的结果：</p>
+<table><thead><tr><th>求解器的回答</th><th>需要给出什么</th><th>怎样检查</th></tr></thead><tbody><tr><td>“有解”</td><td>一组具体的真假取值</td><td>代回原条件，确认全部满足</td></tr><tr><td>“无解”</td><td>说明矛盾的证明记录</td><td>交给独立检查程序核验，论文使用 DRAT 证明检查</td></tr></tbody></table>
+<p>例如，条件要求“a 为真，且 a 为假”，求解器应该回答无解。改动后的代码不能为了快而随意回答；<strong>不通过结果检查的版本要被淘汰，而不是进入速度比较。</strong></p>
+<p>通过一批测试不等于证明程序对所有未来输入都正确。实际使用新的实例时，结果证据仍然需要检查。</p>
+<h4 id="sat-evaluate">5.1.5 第三步：用一批题目测试，保留有效改进</h4>
+<p>正确性过关后，再在基准题目上测量：解决了多少题、花了多久、有没有超时。基准就是固定的一批测试问题，方便不同版本在相同条件下比较。</p>
+<p>有的修改只让少数题更快，却使更多题超时；有的修改根本没有收益。系统将这些结果返回给智能体，帮助提出下一轮修改。<strong>这是一个反复修改、检查和筛选的过程，不能期待一次生成就全面变好。</strong></p>
+<p>论文使用 2024 年 SAT 竞赛的题目进行优化反馈，再用 2025 年题目检查效果是否能迁移，避免只看在同一批优化题目上的成绩。</p>
+<h4 id="sat-control">5.1.6 规则与人工参与：约束智能体的修改</h4>
+<p>规则手册要求保留结果检查、记录修改和遵守工程约定；编译失败、答案错误或性能退化都会反馈到下一轮。检查程序和评分条件不能由智能体随意改掉，否则可能出现“改评分规则获得高分”的假进步。</p>
+<p>论文也说明，完全自动运行效果并不理想，后期有人提供高层方向，智能体负责具体实现和迭代。<strong>因此，它展示的是人和智能体协同改进求解器，不是全程无人参与的自动发现。</strong></p>
+<h4 id="sat-performance">5.1.7 实验结果：在作者测试中，比冠军基线多解出 13 题</h4>
+<p><strong>在作者使用的 2025 年测试集合和相同实验环境中，最好的演化版本解决 347 题，对照冠军基线解决 334 题，多解决 13 题。</strong>这是作者复现实验中的比较，不是 SATLUTION 获得了官方竞赛冠军。</p>
+<p>研发过程约进行了 70 轮迭代，并使用大规模并行计算评估，开发成本较高。结果针对通用 SAT；接入芯片模型检查或等价性验证后能提高多少，还需要单独测试。<strong>运行时不需要 LLM，不代表研发过程没有模型和计算成本。</strong></p>
+</section><section>
+<h2 id="comparison">第六章 跨方向比较与研究机会</h2><table><thead><tr><th>维度</th><th>统一记录的问题</th></tr></thead><tbody><tr><td>接入位置</td><td>改变模型、调度、证明路线还是求解器代码？</td></tr><tr><td>接入时间</td><td>离线开发、每实例预处理，还是证明中反复调用？</td></tr><tr><td>可靠性</td><td>哪些是猜测？什么检查后才生效？可信基础有哪些？</td></tr><tr><td>性能</td><td>总时间、解决数、内存、模型费用与波动是否计入？</td></tr><tr><td>泛化</td><td>训练/调参/测试是否分离，跨设计家族是否有效？</td></tr><tr><td>复现</td><td>代码、基准、工具版本与授权是否可获得？</td></tr></tbody></table><p>四种方法分别改变模型、工作流程、证明路线与求解器实现。它们的共同点是将 LLM 的提议能力与严格工具的检查能力结合；收益必须结合模型成本、任务难度和验证后端判断。流程自动化不等于引擎调度优化，通用 SAT 的性能提升也需要经过硬件验证工作负载检验。</p></section><section><h2 id="references">附录 术语与参考资料</h2><table><thead><tr><th>术语</th><th>含义</th></tr></thead><tbody><tr><td>属性 / 断言</td><td>希望设计满足的精确规则</td></tr><tr><td>过近似</td><td>保留原行为，允许额外行为的抽象</td></tr><tr><td>SMT</td><td>处理位向量、算术等理论约束的可满足性问题</td></tr><tr><td>CEGAR</td><td>根据虚假反例逐步恢复必要模型细节</td></tr><tr><td>AST</td><td>表示代码语法结构的树</td></tr><tr><td>IC3/PDR</td><td>通过引理与归纳关系证明安全或寻找反例的模型检查方法</td></tr></tbody></table><ol><li><a href="https://arxiv.org/html/2608.17304v1">NeuroAbs，v1 全文</a>：§3 方法；§3.4 包含检查；§3.5 R-CEGAR；§4 实验。</li><li><a href="https://arxiv.org/abs/2609.27162">Agentic-IC3</a>：§4.2 批泛化，§4.3–4.4 观察与回退，§5 表 2–3 实验。</li><li><a href="https://arxiv.org/abs/2509.07367">SATLUTION 原论文</a>：后续求解器章节候选。</li><li><a href="https://www.cse.cuhk.edu.hk/~byu/papers/C312-ASPDAC2026-Verif.pdf">LLM-Assisted Circuit Verification: A Comprehensive Survey</a>：领域入口，包含广义功能验证。</li></ol><p>数据来源：所列论文的固定版本。实验结果均为原论文报告，未作独立复现；不同论文的基准、硬件与预算不同，数字不作跨任务排名。</p></section></main>
 </div>
 <button class="backtop" id="backtop" type="button" aria-label="回到顶部">↑</button>
 <script>
