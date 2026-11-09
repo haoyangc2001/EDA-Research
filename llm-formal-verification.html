@@ -357,6 +357,21 @@ eqn{display:block;margin:1.05em 0}
 .diagram-scroll{overflow:auto}.circuit{margin:24px 0;padding:16px;border:1px solid var(--c-border);border-radius:10px;background:var(--c-bg-soft)}.circuit svg{display:block;width:100%;min-width:740px}.node rect{fill:var(--c-bg);stroke:var(--c-border);stroke-width:1.5}.node.focus rect{fill:#fff1e5;stroke:#d98c42}.node.unclocked rect{fill:var(--c-bg-soft);stroke:#9ca3af;stroke-dasharray:5 4}.node text{font:16px var(--font-mono);fill:var(--c-text)}.node .sub{font-size:12px;fill:var(--c-text-soft)}.wire{fill:none;stroke:#748396;stroke-width:1.8}.label{font:14px var(--font-sans);fill:var(--c-text-soft)}figcaption{font-size:12px;color:var(--c-text-soft);margin-top:12px}.doc .explain-diagram{background:var(--c-bg-soft);color:var(--c-text);border:1px solid var(--c-border);white-space:pre;overflow:auto;padding:20px}.technical{margin:30px 0;padding:16px;border:1px solid var(--c-border);border-radius:10px;background:var(--c-bg-soft)}.technical summary{cursor:pointer;color:var(--c-accent);font-weight:650}html[data-theme="dark"] .node.focus rect{fill:#422e20;stroke:#d98c42}.doc details a{overflow-wrap:anywhere}@media print{.technical{display:none}.circuit svg{min-width:0}.doc .explain-diagram{white-space:pre-wrap}}
 
 .paper-figure{margin:26px 0;padding:16px;border:1px solid var(--c-border);border-radius:10px;background:var(--c-bg-soft);break-inside:avoid}.paper-figure a{display:block;text-align:center}.paper-figure img{display:block;width:100%;height:auto;max-width:760px;margin:auto;background:#fff;border-radius:4px}.paper-figure.narrow img{max-width:520px}.paper-figure figcaption{font-size:.88rem;line-height:1.7;color:var(--c-text-soft);margin-top:12px}.paper-figure .source{font-size:.8rem;margin:6px 0 0}.paper-figure .source a{display:inline} @media print{.paper-figure{padding:8px}.paper-figure img{max-height:420px;object-fit:contain}}
+
+/* Responsive comparison for the signal-localization example. */
+.localize-example{margin:24px 0}
+.localize-example .example-task{padding:12px 16px;background:var(--c-accent-soft);border-radius:var(--radius)}
+.localize-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.localize-card{min-width:0;padding:16px;border:1px solid var(--c-border);border-radius:var(--radius);background:var(--c-bg)}
+.localize-card-title{font-size:1rem;font-weight:700;margin-bottom:12px;color:var(--c-accent)}
+.localize-card p,.localize-card li{font-size:.91rem;line-height:1.8}
+.localize-card pre{font-size:.79rem;overflow:auto;padding:12px}
+.localize-card ul{padding-left:20px}
+.localize-card .localize-result{border-top:1px solid var(--c-border);padding-top:12px;margin-bottom:0}
+.localize-highlight{background:var(--c-accent-soft);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:2px 3px}
+.localize-note{color:var(--c-text-soft);font-size:.86rem;line-height:1.8}
+@media(max-width:900px){.localize-grid{grid-template-columns:1fr}}
+@media print{.localize-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.localize-card{break-inside:avoid}.localize-card pre{white-space:pre-wrap}}
 </style>
 </head>
 <body>
@@ -415,14 +430,35 @@ eqn{display:block;margin:1.05em 0}
 <p><strong>黄色区域：严格检查并修正。</strong>SMT 检查候选改写是否保留原设计的可能行为；通过后，将改写应用到模型，再由模型检查器验证目标性质。若出现反例，就缩减反例并定位相关抽象，恢复必要细节后重新检查。真实错误需要报告，超时或未确定也不能当作证明成功。</p>
 <p>图中的回路表示：<strong>抽象不是一次生成后就结束，而是通过验证反馈逐步调整。</strong>LLM 负责提出可能有效的简化，符号工具负责把关，后续四步分别解释这一过程。</p>
 <h4 id="na-localize">2.3.3 第一步：理解场景，定位候选代码</h4>
-<p>Signal Analyzer 首先从规格和验证场景理解相关概念，再结合 RTL 信号声明映射实际信号名。例如“运算类型”可能叫 op，“指令字”可能叫 inst。接着静态分析沿数据依赖和控制依赖追踪代码。</p>
-<p><strong>数据依赖</strong>回答“结果由哪些数值算出”；<strong>控制依赖</strong>回答“哪个条件决定采用哪种计算”。LLM 提供语义线索，程序追踪确定的代码关系，避免让模型自由寻找并改写整个工程。</p>
-<pre><code>inst 的操作字段 → op → 选择 result 的运算分支
-                         ↑
-                       a、b</code></pre>
-<p>定位时考虑 op=ADD，可以帮助看出其他分支的抽象机会。但这是分析候选位置的场景信息，不自动变成验证器中的“op 永远为 ADD”。任何最终抽象仍要独立接受包含检查。</p>
-<p>这一阶段的定位可能不够好，影响优化收益；它本身不是最终正确性保证。</p>
-<figure class="paper-figure narrow" id="paper-figure-3"><a href="assets/neuroabs/figure-3.png" target="_blank" rel="noopener" title="打开原图查看细节"><img src="assets/neuroabs/figure-3.png" alt="原文图 3：Signal Analyzer 的两阶段提示与输出，从规格含义映射到实际信号。" loading="lazy" decoding="async"></a><figcaption>原文图 3：Signal Analyzer 的两阶段提示与输出，从规格含义映射到实际信号。 点击图片可打开大图。</figcaption><p class="source">来源：<a href="https://arxiv.org/pdf/2608.17304v1#page=3">NeuroAbs，arXiv v1，第 3 页，图 3</a>。原图裁剪，未重绘；附中文说明。</p></figure><figure class="paper-figure narrow" id="paper-figure-4"><a href="assets/neuroabs/figure-4.png" target="_blank" rel="noopener" title="打开原图查看细节"><img src="assets/neuroabs/figure-4.png" alt="原文图 4：使用场景信息进行常量传播，定位可能被简化的逻辑；定位信息不自动成为最终验证假设。" loading="lazy" decoding="async"></a><figcaption>原文图 4：使用场景信息进行常量传播，定位可能被简化的逻辑；定位信息不自动成为最终验证假设。 点击图片可打开大图。</figcaption><p class="source">来源：<a href="https://arxiv.org/pdf/2608.17304v1#page=4">NeuroAbs，arXiv v1，第 4 页，图 4</a>。原图裁剪，未重绘；附中文说明。</p></figure><h4 id="na-rewrite">2.3.4 第二步：AST 限定位置，LLM 提议改法</h4>
+<p>例如，一个运算单元可以做加法或乘法。代码中的 <code>op</code> 表示选择哪种运算，<code>a</code>、<code>b</code> 是输入的两个数，<code>result</code> 保存结果。<strong>这些在电路中传递或保存数值的量，就叫作“信号”。</strong></p>
+<p>LLM 先阅读设计说明和验证目标，理解“这次只检查加法”，再找出代码中哪些信号负责选择运算、保存结果。</p>
+<p>接着，<strong>NeuroAbs 的代码分析程序</strong>读取 RTL，查找哪些语句计算结果、哪些条件决定执行加法还是乘法。这就是静态分析：不用运行电路，直接从代码中找出<strong>“谁影响谁”</strong>，把 LLM 提供的线索落实到具体位置。</p>
+<p>传统工具也能追踪这些关系，但加法和乘法都影响同一个结果，工具可能把两套计算一起保留下来。<strong>LLM 则结合“当前关注加法”这一目标，帮助寻找可以简化的细节。</strong>这一步只是找位置，具体能不能改、怎样改，还要由后续步骤检查。</p>
+<div class="localize-example" role="group" aria-label="同一段代码的三列分析对照">
+<p class="example-task"><strong>同一个任务：</strong>检查执行加法时，结果是否等于两个输入之和。</p>
+<div class="localize-grid">
+<div class="localize-card"><div class="localize-card-title">① 原始 RTL 示例</div>
+<p>用 <code>op</code> 选择运算，两个分支共用结果信号。</p>
+<pre><code>// 组合逻辑示意
+always_comb begin
+  if (op == ADD)
+    result = a + b;
+  else
+    result = a * b;
+end</code></pre>
+<p class="localize-result">要找的位置：选择运算的条件，以及给结果赋值的语句。</p></div>
+<div class="localize-card"><div class="localize-card-title">② 传统结构分析</div>
+<p>从 <code>result</code> 往回找，发现它同时受这些内容影响：</p>
+<ul><li><code>op</code>：决定走哪个分支。</li><li><code>a + b</code>：加法分支。</li><li><code>a * b</code>：乘法分支。</li></ul>
+<p class="localize-result"><strong>可能的结果：</strong>两种计算都与输出有关，因此都保留在分析范围内。</p></div>
+<div class="localize-card"><div class="localize-card-title">③ LLM 辅助分析</div>
+<p>在同样的代码关系之外，结合当前目标：“只检查加法是否正确”。</p>
+<ul><li>识别 <code>op == ADD</code> 是当前关注的条件。</li><li>定位加法分支及其他运算分支。</li><li><strong class="localize-highlight">把乘法分支标为候选抽象位置。</strong></li></ul>
+<p class="localize-result"><strong>可能的结果：</strong>提出“其他分支能否省略具体计算”的线索，交给下一步处理。</p></div>
+</div>
+<p class="localize-note">这是教学示例，传统方法的表现取决于具体分析能力；结合场景约束的传统分析也可能进一步化简。右列仅表示候选位置，尚未改写电路，也没有增加“永远只执行加法”的假设。</p>
+</div>
+<h4 id="na-rewrite">2.3.4 第二步：AST 限定位置，LLM 提议改法</h4>
 <p>AST 将代码组织成条件、赋值、分支等语法节点。程序定位允许修改的完整语句，提供周围上下文；Abstractor 仅改写所指定区域。AST 决定“哪里能改”，LLM 提议“怎样改”，数学检查判断“能否接受”。</p>
 <p>以下是便于解释的示例；“任意值”也不是可直接复制的 Verilog 语法。</p>
 <pre><code>原设计：
