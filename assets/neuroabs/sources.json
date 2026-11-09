@@ -1,0 +1,93 @@
+[
+  {
+    "figure": 1,
+    "pdf_page": 2,
+    "clip_points": [
+      100,
+      82,
+      245,
+      240
+    ],
+    "file": "figure-1.png",
+    "scale": 3,
+    "source": "https://arxiv.org/pdf/2608.17304v1"
+  },
+  {
+    "figure": 2,
+    "pdf_page": 3,
+    "clip_points": [
+      87,
+      82,
+      524,
+      256
+    ],
+    "file": "figure-2.png",
+    "scale": 3,
+    "source": "https://arxiv.org/pdf/2608.17304v1"
+  },
+  {
+    "figure": 3,
+    "pdf_page": 3,
+    "clip_points": [
+      326,
+      274,
+      548,
+      458
+    ],
+    "file": "figure-3.png",
+    "scale": 3,
+    "source": "https://arxiv.org/pdf/2608.17304v1"
+  },
+  {
+    "figure": 4,
+    "pdf_page": 4,
+    "clip_points": [
+      366,
+      82,
+      507,
+      267
+    ],
+    "file": "figure-4.png",
+    "scale": 3,
+    "source": "https://arxiv.org/pdf/2608.17304v1"
+  },
+  {
+    "figure": 5,
+    "pdf_page": 4,
+    "clip_points": [
+      354,
+      318,
+      520,
+      464
+    ],
+    "file": "figure-5.png",
+    "scale": 3,
+    "source": "https://arxiv.org/pdf/2608.17304v1"
+  },
+  {
+    "figure": 6,
+    "pdf_page": 6,
+    "clip_points": [
+      114,
+      81,
+      289,
+      160
+    ],
+    "file": "figure-6.png",
+    "scale": 3,
+    "source": "https://arxiv.org/pdf/2608.17304v1"
+  },
+  {
+    "figure": 7,
+    "pdf_page": 7,
+    "clip_points": [
+      331,
+      82,
+      548,
+      177
+    ],
+    "file": "figure-7.png",
+    "scale": 3,
+    "source": "https://arxiv.org/pdf/2608.17304v1"
+  }
+]

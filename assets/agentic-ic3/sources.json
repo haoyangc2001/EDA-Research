@@ -1,0 +1,38 @@
+[
+  {
+    "figure": 1,
+    "pdf_page": 4,
+    "clip_points": [
+      177,
+      112,
+      455,
+      242
+    ],
+    "file": "figure-1.png",
+    "source": "https://arxiv.org/pdf/2609.27162v1"
+  },
+  {
+    "figure": 2,
+    "pdf_page": 5,
+    "clip_points": [
+      132,
+      228,
+      484,
+      596
+    ],
+    "file": "figure-2.png",
+    "source": "https://arxiv.org/pdf/2609.27162v1"
+  },
+  {
+    "figure": 3,
+    "pdf_page": 7,
+    "clip_points": [
+      178,
+      112,
+      457,
+      272
+    ],
+    "file": "figure-3.png",
+    "source": "https://arxiv.org/pdf/2609.27162v1"
+  }
+]

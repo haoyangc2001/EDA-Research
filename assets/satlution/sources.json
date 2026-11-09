@@ -1,0 +1,26 @@
+[
+  {
+    "figure": 9,
+    "page": 11,
+    "clip_points": [
+      102,
+      72,
+      476,
+      263
+    ],
+    "source": "https://arxiv.org/pdf/2509.07367v1",
+    "file": "figure-9.png"
+  },
+  {
+    "figure": 10,
+    "page": 14,
+    "clip_points": [
+      120,
+      105,
+      503,
+      245
+    ],
+    "source": "https://arxiv.org/pdf/2509.07367v1",
+    "file": "figure-10.png"
+  }
+]
