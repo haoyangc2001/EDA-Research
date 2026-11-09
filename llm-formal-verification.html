@@ -372,6 +372,9 @@ eqn{display:block;margin:1.05em 0}
 .localize-note{color:var(--c-text-soft);font-size:.86rem;line-height:1.8}
 @media(max-width:900px){.localize-grid{grid-template-columns:1fr}}
 @media print{.localize-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.localize-card{break-inside:avoid}.localize-card pre{white-space:pre-wrap}}
+
+.localize-grid.abstraction-pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:700px){.localize-grid.abstraction-pair{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -390,7 +393,7 @@ eqn{display:block;margin:1.05em 0}
 <button class="mini-btn" id="expandAll" type="button">展开</button>
 <button class="mini-btn" id="collapseAll" type="button">折叠</button>
 </div>
-<nav class="nav"><a class="nav-link lv1" href="#top">研究方向与代表方法</a><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#overview">第一章 研究范围与总体地图</a></div><div class="nav-children"><a class="nav-link lv3" href="#layers">1.1 形式化工具的四层理解</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#modeling">第二章 方向一：LLM 辅助建模与抽象简化</a></div><div class="nav-children"><a class="nav-link lv3" href="#neuroabs">2.3 NeuroAbs：基于语义理解的 RTL 抽象</a><a class="nav-link lv3" href="#na-problem">2.3.1 一句话理解与问题定义</a><a class="nav-link lv3" href="#na-flow">2.3.2 方法总览</a><a class="nav-link lv3" href="#na-localize">2.3.3 第一步：理解场景，定位候选代码</a><a class="nav-link lv3" href="#na-rewrite">2.3.4 第二步：AST 限定位置，LLM 提议改法</a><a class="nav-link lv3" href="#na-soundness">2.3.5 第三步：SMT 检查行为包含</a><a class="nav-link lv3" href="#na-refine">2.3.6 第四步：反例缩减与恢复细节</a><a class="nav-link lv3" href="#na-experiment">2.3.7 实验：收益及数字的正确读法</a><a class="nav-link lv3" href="#na-ablation">2.3.8 消融：通过检查，不等于有用</a><a class="nav-link lv3" href="#na-limits">2.3.9 局限、成本与复现问题</a><a class="nav-link lv3" href="#na-takeaway">2.3.10 从论文提炼接入范式</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#orchestration">第三章 方向二：验证流程调度与编排</a></div><div class="nav-children"><a class="nav-link lv3" href="#saarthi">3.1 Saarthi：多智能体验证工作流</a><a class="nav-link lv3" href="#saarthi-problem">3.1.1 问题：能生成断言，还不等于完成验证</a><a class="nav-link lv3" href="#saarthi-roles">3.1.2 架构：专业分工和协调者</a><a class="nav-link lv3" href="#saarthi-loop">3.1.3 工作循环：按错误类型安排下一步</a><a class="nav-link lv3" href="#saarthi-grounding">3.1.4 规则手册和 GraphRAG：减少反复犯错</a><a class="nav-link lv3" href="#saarthi-trust">3.1.5 可靠性：不同检查负责不同承诺</a><a class="nav-link lv3" href="#saarthi-results">3.1.6 实验：覆盖反馈和人工参与是否有效</a><a class="nav-link lv3" href="#saarthi-limits">3.1.7 局限与在四层地图中的位置</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#engines">第四章 方向三：验证引擎内部证明搜索</a></div><div class="nav-children"><a class="nav-link lv3" href="#engine-overview">4.1 方向概述：从固定启发式到语义指导</a><a class="nav-link lv3" href="#agentic-ic3">4.2 Agentic-IC3：语义驱动的 IC3 证明搜索</a><a class="nav-link lv3" href="#aic3-problem">4.2.1 一句话理解：目标已知，但证明路线难找</a><a class="nav-link lv3" href="#aic3-basics">4.2.2 IC3 基础：从坏状态往回追，逐步建立屏障</a><a class="nav-link lv3" href="#aic3-example">4.2.3 原论文例子：看出两个控制器之间的整体关系</a><a class="nav-link lv3" href="#aic3-architecture">4.2.4 架构：Agent 在内环提出建议，内核维护证明</a><a class="nav-link lv3" href="#aic3-propose">4.2.5 Propose：分别处理 SAT 与 UNSAT 两种反馈</a><a class="nav-link lv3" href="#aic3-observe">4.2.6 Observe：给证明过程增加一个有意义的观察量</a><a class="nav-link lv3" href="#aic3-backtrack">4.2.7 Backtrack：这条路太难，回到上一级重新选择</a><a class="nav-link lv3" href="#aic3-correctness">4.2.8 为什么 LLM 猜错，不应直接导致假安全？</a><a class="nav-link lv3" href="#aic3-results">4.2.9 实验：难例解决能力与调用成本</a><a class="nav-link lv3" href="#aic3-ablation">4.2.10 消融：批处理减少模型交互</a><a class="nav-link lv3" href="#aic3-limits">4.2.11 局限、复现与研究启发</a><a class="nav-link lv3" href="#aic3-comparison">4.2.12 与 NeuroAbs 对照：改变题目还是改变思路？</a><a class="nav-link lv3" href="#engine-code-plan">4.3 另一种接入方式：离线优化引擎代码</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#solvers">第五章 方向四：底层求解器优化</a></div><div class="nav-children"><a class="nav-link lv3" href="#satlution">5.1 SATLUTION：仓库级 SAT 求解器代码进化</a><a class="nav-link lv3" href="#sat-problem">5.1.1 问题：求解器内部策略很难人工调好</a><a class="nav-link lv3" href="#sat-flow">5.1.2 接入方式：离线研发，在线运行普通求解器</a><a class="nav-link lv3" href="#sat-edits">5.1.3 修改什么：策略代码、集成与规则</a><a class="nav-link lv3" href="#sat-correctness">5.1.4 为什么“更快”不能靠猜答案</a><a class="nav-link lv3" href="#sat-performance">5.1.5 评价：PAR-2、独立年份测试与硬件条件</a><a class="nav-link lv3" href="#sat-cost">5.1.6 成本、失败与适用范围</a><a class="nav-link lv3" href="#sat-takeaway">5.1.7 接入范式与研究空间</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#comparison">第六章 跨方向比较与研究机会</a></div><div class="nav-children"></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#references">附录 术语与参考资料</a></div><div class="nav-children"></div></div></nav>
+<nav class="nav"><a class="nav-link lv1" href="#top">研究方向与代表方法</a><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#overview">第一章 研究范围与总体地图</a></div><div class="nav-children"><a class="nav-link lv3" href="#layers">1.1 形式化工具的四层理解</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#modeling">第二章 方向一：LLM 辅助建模与抽象简化</a></div><div class="nav-children"><a class="nav-link lv3" href="#neuroabs">2.3 NeuroAbs：基于语义理解的 RTL 抽象</a><a class="nav-link lv3" href="#na-problem">2.3.1 一句话理解与问题定义</a><a class="nav-link lv3" href="#na-flow">2.3.2 方法总览</a><a class="nav-link lv3" href="#na-localize">2.3.3 第一步：理解场景，定位候选代码</a><a class="nav-link lv3" href="#na-rewrite">2.3.4 第二步：圈定修改范围，LLM 提出简化方案</a><a class="nav-link lv3" href="#na-soundness">2.3.5 第三步：检查简化有没有漏掉真实行为</a><a class="nav-link lv3" href="#na-refine">2.3.6 第四步：根据假警报，补回必要细节</a><a class="nav-link lv3" href="#na-experiment">2.3.7 实验：收益及数字的正确读法</a><a class="nav-link lv3" href="#na-ablation">2.3.8 消融：通过检查，不等于有用</a><a class="nav-link lv3" href="#na-limits">2.3.9 局限、成本与复现问题</a><a class="nav-link lv3" href="#na-takeaway">2.3.10 从论文提炼接入范式</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#orchestration">第三章 方向二：验证流程调度与编排</a></div><div class="nav-children"><a class="nav-link lv3" href="#saarthi">3.1 Saarthi：多智能体验证工作流</a><a class="nav-link lv3" href="#saarthi-problem">3.1.1 问题：能生成断言，还不等于完成验证</a><a class="nav-link lv3" href="#saarthi-roles">3.1.2 架构：专业分工和协调者</a><a class="nav-link lv3" href="#saarthi-loop">3.1.3 工作循环：按错误类型安排下一步</a><a class="nav-link lv3" href="#saarthi-grounding">3.1.4 规则手册和 GraphRAG：减少反复犯错</a><a class="nav-link lv3" href="#saarthi-trust">3.1.5 可靠性：不同检查负责不同承诺</a><a class="nav-link lv3" href="#saarthi-results">3.1.6 实验：覆盖反馈和人工参与是否有效</a><a class="nav-link lv3" href="#saarthi-limits">3.1.7 局限与在四层地图中的位置</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#engines">第四章 方向三：验证引擎内部证明搜索</a></div><div class="nav-children"><a class="nav-link lv3" href="#engine-overview">4.1 方向概述：从固定启发式到语义指导</a><a class="nav-link lv3" href="#agentic-ic3">4.2 Agentic-IC3：语义驱动的 IC3 证明搜索</a><a class="nav-link lv3" href="#aic3-problem">4.2.1 一句话理解：目标已知，但证明路线难找</a><a class="nav-link lv3" href="#aic3-basics">4.2.2 IC3 基础：从坏状态往回追，逐步建立屏障</a><a class="nav-link lv3" href="#aic3-example">4.2.3 原论文例子：看出两个控制器之间的整体关系</a><a class="nav-link lv3" href="#aic3-architecture">4.2.4 架构：Agent 在内环提出建议，内核维护证明</a><a class="nav-link lv3" href="#aic3-propose">4.2.5 Propose：分别处理 SAT 与 UNSAT 两种反馈</a><a class="nav-link lv3" href="#aic3-observe">4.2.6 Observe：给证明过程增加一个有意义的观察量</a><a class="nav-link lv3" href="#aic3-backtrack">4.2.7 Backtrack：这条路太难，回到上一级重新选择</a><a class="nav-link lv3" href="#aic3-correctness">4.2.8 为什么 LLM 猜错，不应直接导致假安全？</a><a class="nav-link lv3" href="#aic3-results">4.2.9 实验：难例解决能力与调用成本</a><a class="nav-link lv3" href="#aic3-ablation">4.2.10 消融：批处理减少模型交互</a><a class="nav-link lv3" href="#aic3-limits">4.2.11 局限、复现与研究启发</a><a class="nav-link lv3" href="#aic3-comparison">4.2.12 与 NeuroAbs 对照：改变题目还是改变思路？</a><a class="nav-link lv3" href="#engine-code-plan">4.3 另一种接入方式：离线优化引擎代码</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#solvers">第五章 方向四：底层求解器优化</a></div><div class="nav-children"><a class="nav-link lv3" href="#satlution">5.1 SATLUTION：仓库级 SAT 求解器代码进化</a><a class="nav-link lv3" href="#sat-problem">5.1.1 问题：求解器内部策略很难人工调好</a><a class="nav-link lv3" href="#sat-flow">5.1.2 接入方式：离线研发，在线运行普通求解器</a><a class="nav-link lv3" href="#sat-edits">5.1.3 修改什么：策略代码、集成与规则</a><a class="nav-link lv3" href="#sat-correctness">5.1.4 为什么“更快”不能靠猜答案</a><a class="nav-link lv3" href="#sat-performance">5.1.5 评价：PAR-2、独立年份测试与硬件条件</a><a class="nav-link lv3" href="#sat-cost">5.1.6 成本、失败与适用范围</a><a class="nav-link lv3" href="#sat-takeaway">5.1.7 接入范式与研究空间</a></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#comparison">第六章 跨方向比较与研究机会</a></div><div class="nav-children"></div></div><div class="nav-group"><div class="nav-row"><button class="chev" type="button" aria-label="折叠章节">▾</button><a class="nav-link lv2" href="#references">附录 术语与参考资料</a></div><div class="nav-children"></div></div></nav>
 </aside>
 <div class="mask" id="mask"></div>
 <main class="doc" id="doc"><header class="doc-hero"><h1 id="top">大模型与智能体赋能硬件形式化验证：方向总览与论文解读</h1><blockquote><p>大模型如何帮助形式化验证：从 RTL 抽象、验证流程编排，到证明搜索与求解器优化。</p></blockquote></header><section><h2 id="overview">第一章 研究范围与总体地图</h2>
@@ -430,6 +433,7 @@ eqn{display:block;margin:1.05em 0}
 <p><strong>黄色区域：严格检查并修正。</strong>SMT 检查候选改写是否保留原设计的可能行为；通过后，将改写应用到模型，再由模型检查器验证目标性质。若出现反例，就缩减反例并定位相关抽象，恢复必要细节后重新检查。真实错误需要报告，超时或未确定也不能当作证明成功。</p>
 <p>图中的回路表示：<strong>抽象不是一次生成后就结束，而是通过验证反馈逐步调整。</strong>LLM 负责提出可能有效的简化，符号工具负责把关，后续四步分别解释这一过程。</p>
 <h4 id="na-localize">2.3.3 第一步：理解场景，定位候选代码</h4>
+<p>面对一大份 RTL，NeuroAbs 不会直接让 LLM 到处修改，而是先问：<strong>这次要验证什么，哪些代码值得重点分析？</strong></p>
 <p>例如，一个运算单元可以做加法或乘法。代码中的 <code>op</code> 表示选择哪种运算，<code>a</code>、<code>b</code> 是输入的两个数，<code>result</code> 保存结果。<strong>这些在电路中传递或保存数值的量，就叫作“信号”。</strong></p>
 <p>LLM 先阅读设计说明和验证目标，理解“这次只检查加法”，再找出代码中哪些信号负责选择运算、保存结果。</p>
 <p>接着，<strong>NeuroAbs 的代码分析程序</strong>读取 RTL，查找哪些语句计算结果、哪些条件决定执行加法还是乘法。这就是静态分析：不用运行电路，直接从代码中找出<strong>“谁影响谁”</strong>，把 LLM 提供的线索落实到具体位置。</p>
@@ -458,40 +462,51 @@ end</code></pre>
 </div>
 <p class="localize-note">这是教学示例，传统方法的表现取决于具体分析能力；结合场景约束的传统分析也可能进一步化简。右列仅表示候选位置，尚未改写电路，也没有增加“永远只执行加法”的假设。</p>
 </div>
-<h4 id="na-rewrite">2.3.4 第二步：AST 限定位置，LLM 提议改法</h4>
-<p>AST 将代码组织成条件、赋值、分支等语法节点。程序定位允许修改的完整语句，提供周围上下文；Abstractor 仅改写所指定区域。AST 决定“哪里能改”，LLM 提议“怎样改”，数学检查判断“能否接受”。</p>
-<p>以下是便于解释的示例；“任意值”也不是可直接复制的 Verilog 语法。</p>
-<pre><code>原设计：
-if op == ADD:
+<h4 id="na-rewrite">2.3.4 第二步：圈定修改范围，LLM 提出简化方案</h4>
+<p>第一步找到了值得考虑简化的位置。第二步要做的是：<strong>明确哪些代码允许修改，再让 LLM 提出具体改法。</strong>这样可以避免模型在修改一个分支时，把其他逻辑也一起改掉。</p>
+<p>为了准确圈定位置，程序先把 RTL 解析成 <strong>AST（抽象语法树）</strong>。名字看起来复杂，可以把它理解为<strong>代码的结构目录</strong>：一段代码包含哪个条件、条件成立时执行哪些语句、不成立时执行哪些语句，都会被明确标出来。它只是在整理代码结构，<strong>不是把电路变简单的那个“抽象”</strong>。</p>
+<p>例如，下面这段代码在结构上包含一个条件 <code>op == ADD</code>，以及条件成立和不成立时的两条赋值。借助 AST，程序可以找到完整的条件语句，并将允许修改的区域及周围代码交给 LLM。<strong>程序圈定“哪里能改”，LLM 提议“怎样改”；改得是否可靠，要由第三步检查。</strong></p>
+<div class="localize-example" role="group" aria-label="原设计与候选抽象的两列对照">
+<p class="example-task"><strong>示例目标：</strong>检查执行加法时，结果是否正确。下面使用便于理解的伪代码。</p>
+<div class="localize-grid abstraction-pair">
+<div class="localize-card"><div class="localize-card-title">① 原设计</div>
+<pre><code>如果 op == ADD：
     result = a + b
-else if op == MUL:
-    result = a × b
-else:
-    result = 其他计算
-
-候选抽象：
-if op == ADD:
+否则：
+    result = a × b</code></pre>
+<p class="localize-result">加法分支保留加法关系，其他分支保留乘法关系。验证器需要处理这些具体计算。</p></div>
+<div class="localize-card"><div class="localize-card-title">② LLM 提出的候选抽象</div>
+<pre><code>如果 op == ADD：
     result = a + b
-else:
+否则：
     result = 任意值</code></pre>
-<p>任意值允许该位宽内所有取值。它不等于随机抽取一次，也不等于填 0。论文把改写中的 X 映射为符号非确定变量处理，不能随意套用其他仿真或综合工具的 X 语义。</p>
-<p>为什么行为变多，反而可能更容易？原来求解器必须处理乘法等输入输出关系；取消这些关系后，公式结构可能更简单。它是在放松约束，而不是保证减少所有状态。</p>
-<p>论文实验两个角色均使用 gpt-4o-mini-2024-07-18，并提供 8 个原始/抽象语句示例。它是分工明确的 LLM 流程，不等同于具有自主行动规划的通用 Agent。</p>
-<figure class="paper-figure narrow" id="paper-figure-5"><a href="assets/neuroabs/figure-5.png" target="_blank" rel="noopener" title="打开原图查看细节"><img src="assets/neuroabs/figure-5.png" alt="原文图 5：Abstractor 接收目标语句和上下文，提出限定范围内的抽象改写。" loading="lazy" decoding="async"></a><figcaption>原文图 5：Abstractor 接收目标语句和上下文，提出限定范围内的抽象改写。 点击图片可打开大图。</figcaption><p class="source">来源：<a href="https://arxiv.org/pdf/2608.17304v1#page=4">NeuroAbs，arXiv v1，第 4 页，图 5</a>。原图裁剪，未重绘；附中文说明。</p></figure><h4 id="na-soundness">2.3.5 第三步：SMT 检查行为包含</h4>
-<p>接受抽象的关键方向是：</p>
-<pre><code>原设计的行为 ⊆ 抽象模型的行为</code></pre>
-<p>即允许多出行为，但不能漏掉原本可能发生的行为。对同样的输入 a=2、b=3，原乘法只能输出 6；任意值允许 6 及其他值，固定 0 却排除了 6。</p>
-<table><thead><tr><th>候选</th><th>行为包含</th><th>优化意义</th></tr></thead><tbody><tr><td>result = 任意值</td><td>可以保留乘法全部可能结果</td><td>移除乘法关系，但可能引入假警报</td></tr><tr><td>result = 0</td><td>通常不满足</td><td>可能删掉真实错误路径，不可接受</td></tr><tr><td>保留乘法</td><td>满足</td><td>没有实际简化</td></tr></tbody></table>
-<p>SMT 检查可以理解为寻找“原语句允许、候选却不允许”的取值。若存在则拒绝；证明不存在才通过；超时或 unknown 不等于通过。</p>
-<p>论文第 3.4 节将语句转为 SMT 关系，并对新增非确定变量进行量化处理。这里的解释是包含关系的直观含义；实际编码需同时准确处理输入、输出、当前/下一状态、位宽和量词作用域，不能将赋值简单当作普通数值表达式比较。</p>
-<p>对安全性质，如果抽象系统允许更多行为却仍被证明安全，那么原系统也安全。这个推理依赖初始状态和转移行为的可靠包含，以及性质的正确对应。论文以局部检查和未修改部分保持不变论证组合模型的保守性；前端与检查器实现仍属于可信基础。</p>
-<h4 id="na-refine">2.3.6 第四步：反例缩减与恢复细节</h4>
-<p>例如：a、b 在 0～3，result 位宽足够，原语句 result=a×b，目标 result≤9。抽象为任意值后，验证器可报告 a=2、b=3、result=15。原电路只能输出 6，所以这是抽象额外制造的虚假反例。</p>
-<ol><li>检查抽象模型的目标性质。</li><li>有反例时，缩减与失败无关的信息，使分析聚焦于关键原因。</li><li>定位与失败有关的非确定辅助输入和被改写语句。</li><li>恢复相关语句的原始逻辑，保留其他抽象。</li><li>再次验证，直至得到可靠结论或达到资源限制。</li></ol>
-<p>这就是论文第 3.5 节的 R-CEGAR。缩减反例有助于避免每次恢复全部 RTL。恢复的是相关原语句，不必依赖 LLM 再次自由重写。</p>
-<blockquote><p>反例涉及抽象语句，不足以直接说明它是虚假的。真实 bug 也可能经过这些语句，仍需严格分析、恢复或检查原模型中的可行性。算法图中“无反例”应理解为验证器给出证明，不能把有界未报错或超时当作 SAFE。</p></blockquote>
-<p>可靠抽象不一定有用：抽象太少，求解仍然困难；抽象太多，假警报和精化成本可能很大。系统需要在二者之间取得平衡。</p>
-<figure class="paper-figure narrow" id="paper-figure-6"><a href="assets/neuroabs/figure-6.png" target="_blank" rel="noopener" title="打开原图查看细节"><img src="assets/neuroabs/figure-6.png" alt="原文图 6：反例缩减示例，红色标出缩减后保留的关键赋值，用于定位需要恢复的细节。" loading="lazy" decoding="async"></a><figcaption>原文图 6：反例缩减示例，红色标出缩减后保留的关键赋值，用于定位需要恢复的细节。 点击图片可打开大图。</figcaption><p class="source">来源：<a href="https://arxiv.org/pdf/2608.17304v1#page=6">NeuroAbs，arXiv v1，第 6 页，图 6</a>。原图裁剪，未重绘；附中文说明。</p></figure><h4 id="na-experiment">2.3.7 实验：收益及数字的正确读法</h4>
+<p class="localize-result"><strong>保留加法计算，放松其他分支的结果关系。</strong>这只是候选改法，尚未通过可靠性检查。</p></div>
+</div>
+</div>
+<p><strong>“任意值”是什么意思？</strong>假设结果用 4 位表示，它就可以取 0～15 中的任何值。不是固定写成 0，也不是随机抽一个数，而是让验证器考虑所有允许取值。原来乘法会得到的结果也必须包含在里面；这里的“任意值”是数学含义，不是可以直接照抄的 RTL 写法。</p>
+<p><strong>为什么这样可能更容易算？</strong>原来验证器需要处理“结果必须等于两个输入相乘”的关系；改写后，这个复杂关系被放松了，公式可能更简单。虽然允许的结果更多，计算所需处理的关系却更少。</p>
+<p>不过，乘法分支也可能通过后续周期影响当前要求，不能仅因为“现在关注加法”就认定改写有效。<strong>LLM 先提出方案，下一步严格检查有没有遗漏原电路的真实行为。</strong>如果抽象多出了导致假警报的行为，后续还需要恢复相关细节。</p>
+<h4 id="na-soundness">2.3.5 第三步：检查简化有没有漏掉真实行为</h4>
+<p>LLM 提出改法后，需要检查它有没有遗漏原电路可能发生的情况。<strong>这些情况既包括正常行为，也包括可能违反要求的错误行为。</strong>如果简化时删掉了后者，验证器就可能错误地认为设计安全。</p>
+<p>NeuroAbs 使用 SMT 求解器 Z3，将原语句和改写后的语句转成数学公式，检查：<strong>原电路能产生的结果，简化后是否仍然能够产生。</strong>这样就避免因为简化而隐藏真实错误。</p>
+<p>继续看乘法例子。假设结果位宽足够，输入 <code>a=2</code>、<code>b=3</code>，原电路必须输出 <code>6</code>：</p>
+<table><thead><tr><th>原设计</th><th>候选改法一：结果为任意值</th><th>候选改法二：结果固定为 0</th></tr></thead><tbody><tr><td><code>result = a × b</code></td><td>允许输出 6，也允许其他值</td><td>只允许输出 0</td></tr><tr><td>这组输入下，输出为 6</td><td><strong>保留了原来的结果</strong></td><td><strong>漏掉了原来的结果</strong></td></tr></tbody></table>
+<p>改成“任意值”，原来的乘法结果仍然包含在内；改成固定的 0，就排除了原本可能输出的非零结果，因此通常不能接受。</p>
+<p><strong>Z3 检查的不只是上面这一组数字，而是寻找是否存在任何一种情况：原设计允许，改写后却不允许。</strong>找到这样的情况，就拒绝改写；证明不存在，才通过这一项检查。超时或无法判断，不能当作通过。</p>
+<p>为什么允许多一些结果，却不能少一些？因为我们要证明的是“不会发生错误”。<strong>如果一个允许更多行为的模型都能被证明安全，那么原电路也安全。</strong>但如果删掉了真实行为，就可能恰好把出错路径隐藏了。</p>
+<p>不过，通过检查只代表<strong>没有漏掉原来的行为</strong>，不代表抽象一定好用。多出来的行为可能让验证器产生假警报，这就需要第四步根据反例恢复必要细节。</p>
+<h4 id="na-refine">2.3.6 第四步：根据假警报，补回必要细节</h4>
+<p>第三步保证了<strong>没有遗漏原电路可能发生的情况</strong>。但把某些结果改成“任意值”后，也可能多出原电路不可能发生的情况。如果它们触发了报错，就产生了<strong>假警报，也叫“虚假反例”</strong>。</p>
+<p>例如，输入 <code>a</code>、<code>b</code> 都在 0～3，原电路计算 <code>result = a × b</code>，结果位宽足够，因此结果不超过 9。改成“任意值”后，验证器可能找到 <code>a=2、b=3、result=15</code>，违反了“结果不超过 9”的要求。但原电路在这组输入下只能得到 6，<strong>这个错误是简化模型多出来的，不是原电路真的出错。</strong></p>
+<p>遇到这种情况，不必把所有简化全部撤销。NeuroAbs 会先分析反例，找出<strong>哪些被省略的细节与这次失败有关</strong>，再有针对性地恢复它们。</p>
+<p><strong>先缩减反例：把失败原因看清楚。</strong>工具给出的反例可能包含很多信号和多个周期。缩减就是尝试去掉不影响失败结论的信息，留下足以解释问题的关键条件。这不是随意删除不方便看的数据，而是通过分析检查哪些信息确实不必保留。</p>
+<figure class="paper-figure narrow" id="paper-figure-6"><a href="assets/neuroabs/figure-6.png" target="_blank" rel="noopener" title="打开原图查看细节"><img src="assets/neuroabs/figure-6.png" alt="原文图 6：反例缩减示例，红色标出缩减后保留的关键赋值，用于定位需要恢复的细节。" loading="lazy" decoding="async"></a><figcaption>原文图 6：反例缩减示例，红色标出缩减后保留的关键赋值，用于定位需要恢复的细节。 点击图片可打开大图。</figcaption></figure>
+<p><strong>图 6 可以这样看：</strong>左边的数值和条件经过中间的选择、运算关系，影响右边的结果。红色部分表示缩减后保留的关键条件或取值。读图时不必逐个看懂信号名，重点是：<strong>从一大段失败过程里，找出真正导致报错的那几项信息</strong>，帮助定位需要恢复的代码。</p>
+<p><strong>再恢复细节：只补回相关的原始逻辑。</strong>在前面的乘法例子中，如果问题来自把乘法结果放宽成任意值，就恢复 <code>result = a × b</code>。这样，输出 15 的那条虚假路径被排除了；其他不影响这次问题的简化仍可以保留。</p>
+<p>恢复后，验证器重新检查。若还有假警报，就继续补回必要细节。这种<strong>“简化 → 检查 → 根据反例补细节 → 再检查”</strong>的循环，叫作反例引导的抽象精化，简称 CEGAR；NeuroAbs 在其中加入反例缩减，让恢复更有针对性。</p>
+<p>不过，<strong>抽象模型报错，也可能暴露原电路的真实错误，不能一律当作假警报。</strong>需要检查反例能否在原电路中发生，或恢复相关逻辑后继续验证。最终可能证明要求成立、确认真实错误，也可能因资源不足而无法确定。</p>
+<p>这一阶段主要由程序和形式化工具完成。它的目标是<strong>保留有用的简化，只补回证明所必需的细节</strong>，在计算难度与模型精度之间取得平衡。</p>
+<h4 id="na-experiment">2.3.7 实验：收益及数字的正确读法</h4>
 <p>论文第 4 节采用 Yosys/Pyverilog 进行分析和解析，Z3 检查改写；后端为 AVR development branch 和 rIC3 的 HWMCC 2024 版本。机器为 2.9 GHz Xeon Platinum 8375C、256 GB 内存。</p>
 <table><thead><tr><th>设计</th><th>场景数</th><th>RTL 行数</th></tr></thead><tbody><tr><td>PicoRV32</td><td>8</td><td>3,079</td></tr><tr><td>Piccolo</td><td>22</td><td>14,943</td></tr><tr><td>Flute</td><td>22</td><td>17,228</td></tr><tr><td>I2C</td><td>3</td><td>1,257</td></tr></tbody></table>
 <p>表 1 共四个设计、55 个场景。正文一处称 three designs，与表不一致，此处按表 1 统计。</p>
